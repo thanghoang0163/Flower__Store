@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Flower_Store.exe
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Flower_Store.deps.json
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Flower_Store.runtimeconfig.json
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Flower_Store.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Flower_Store.dll
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Flower_Store.pdb
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.dll
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.pdb
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.genruntimeconfig.cache
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.MainMenu.resources
+C:\Users\Admin\source\repos\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.SignIn.resources
