@@ -47,12 +47,12 @@ namespace Flower_Store
             this.label2 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.id = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -179,9 +179,10 @@ namespace Flower_Store
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(103, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 15);
+            this.label6.Size = new System.Drawing.Size(54, 15);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Flower:";
+            this.label6.Text = "Product:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox6
             // 
@@ -259,6 +260,14 @@ namespace Flower_Store
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Find Flower";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(481, 47);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(187, 23);
+            this.comboBox1.TabIndex = 15;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
@@ -310,14 +319,6 @@ namespace Flower_Store
             this.label3.TabIndex = 24;
             this.label3.Text = "INVENTORY MANAGEMENT";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(481, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 23);
-            this.comboBox1.TabIndex = 15;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -348,7 +349,7 @@ namespace Flower_Store
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Flower";
+            this.Column3.HeaderText = "Product";
             this.Column3.Name = "Column3";
             this.Column3.Width = 150;
             // 

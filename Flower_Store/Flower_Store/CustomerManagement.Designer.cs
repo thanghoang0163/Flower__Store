@@ -39,6 +39,17 @@ namespace Flower_Store
             this.id = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -67,17 +78,6 @@ namespace Flower_Store
             this.label4 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -196,6 +196,68 @@ namespace Flower_Store
             this.dataGridView1.Size = new System.Drawing.Size(1325, 310);
             this.dataGridView1.TabIndex = 24;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "ID";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Customer";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Gender";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 75;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone Number";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Address";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Product";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 150;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Quantity";
+            this.Column9.Name = "Column9";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Unit Price";
+            this.Column8.Name = "Column8";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Total Price";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Supply Date";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 200;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.radioButton2);
@@ -231,7 +293,7 @@ namespace Flower_Store
             this.groupBox3.Size = new System.Drawing.Size(1325, 277);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Supplier";
+            this.groupBox3.Text = "Customer ";
             // 
             // radioButton2
             // 
@@ -487,68 +549,6 @@ namespace Flower_Store
             this.label5.Size = new System.Drawing.Size(23, 15);
             this.label5.TabIndex = 10;
             this.label5.Text = "ID:";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ID";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Customer";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Gender";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 75;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone Number";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Address";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Product";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Quantity";
-            this.Column9.Name = "Column9";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Unit Price";
-            this.Column8.Name = "Column8";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Total Price";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Supply Date";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 200;
             // 
             // CustomerManagement
             // 
