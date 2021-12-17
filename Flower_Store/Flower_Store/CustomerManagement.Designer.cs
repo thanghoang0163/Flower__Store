@@ -29,16 +29,45 @@ namespace Flower_Store
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerManagement));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPhoneF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.txtCustomerF = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIdF = new System.Windows.Forms.TextBox();
             this.id = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dtpCustomer = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTotalpriceE = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtPhoneE = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtUnitpriceE = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtQuantityE = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtProductE = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.txtCustomerE = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtAddressE = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtIdE = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,47 +79,20 @@ namespace Flower_Store
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtPhoneF);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.btnFind);
+            this.groupBox1.Controls.Add(this.txtCustomerF);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtIdF);
             this.groupBox1.Controls.Add(this.id);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(49, 101);
@@ -100,12 +102,12 @@ namespace Flower_Store
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Find Customer";
             // 
-            // textBox3
+            // txtPhoneF
             // 
-            this.textBox3.Location = new System.Drawing.Point(462, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(122, 23);
-            this.textBox3.TabIndex = 16;
+            this.txtPhoneF.Location = new System.Drawing.Point(462, 98);
+            this.txtPhoneF.Name = "txtPhoneF";
+            this.txtPhoneF.Size = new System.Drawing.Size(122, 23);
+            this.txtPhoneF.TabIndex = 16;
             // 
             // label2
             // 
@@ -117,25 +119,25 @@ namespace Flower_Store
             this.label2.TabIndex = 15;
             this.label2.Text = "Phone Number:";
             // 
-            // button1
+            // btnFind
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = global::Flower_Store.Properties.Resources.search;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(601, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 38);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnFind.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
+            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFind.Location = new System.Drawing.Point(601, 161);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(99, 38);
+            this.btnFind.TabIndex = 14;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // txtCustomerF
             // 
-            this.textBox2.Location = new System.Drawing.Point(711, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 23);
-            this.textBox2.TabIndex = 13;
+            this.txtCustomerF.Location = new System.Drawing.Point(711, 50);
+            this.txtCustomerF.Name = "txtCustomerF";
+            this.txtCustomerF.Size = new System.Drawing.Size(279, 23);
+            this.txtCustomerF.TabIndex = 13;
             // 
             // label1
             // 
@@ -147,12 +149,12 @@ namespace Flower_Store
             this.label1.TabIndex = 12;
             this.label1.Text = "Customer:";
             // 
-            // textBox1
+            // txtIdF
             // 
-            this.textBox1.Location = new System.Drawing.Point(462, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 23);
-            this.textBox1.TabIndex = 11;
+            this.txtIdF.Location = new System.Drawing.Point(462, 50);
+            this.txtIdF.Name = "txtIdF";
+            this.txtIdF.Size = new System.Drawing.Size(122, 23);
+            this.txtIdF.TabIndex = 11;
             // 
             // id
             // 
@@ -175,10 +177,10 @@ namespace Flower_Store
             this.label7.TabIndex = 22;
             this.label7.Text = "CUSTOMER MANAGEMENT";
             // 
-            // dataGridView1
+            // dgvCustomer
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -190,102 +192,41 @@ namespace Flower_Store
             this.Column8,
             this.Column10,
             this.Column11});
-            this.dataGridView1.Location = new System.Drawing.Point(49, 367);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1325, 310);
-            this.dataGridView1.TabIndex = 24;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ID";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Customer";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Gender";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 75;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone Number";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Address";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Product";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Quantity";
-            this.Column9.Name = "Column9";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Unit Price";
-            this.Column8.Name = "Column8";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Total Price";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Supply Date";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 200;
+            this.dgvCustomer.Location = new System.Drawing.Point(49, 367);
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.RowTemplate.Height = 25;
+            this.dgvCustomer.Size = new System.Drawing.Size(1325, 310);
+            this.dgvCustomer.TabIndex = 24;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.radioButton2);
             this.groupBox3.Controls.Add(this.radioButton1);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dtpCustomer);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.txtTotalpriceE);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.txtPhoneE);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.txtUnitpriceE);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.txtQuantityE);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.txtProductE);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txtCustomerE);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.txtAddressE);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.txtIdE);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(49, 718);
@@ -348,12 +289,13 @@ namespace Flower_Store
             this.label15.TabIndex = 35;
             this.label15.Text = "VND";
             // 
-            // dateTimePicker1
+            // dtpCustomer
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(957, 146);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(319, 23);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dtpCustomer.CustomFormat = "MM/dd/yyyy   hh:mm:ss tt";
+            this.dtpCustomer.Location = new System.Drawing.Point(957, 146);
+            this.dtpCustomer.Name = "dtpCustomer";
+            this.dtpCustomer.Size = new System.Drawing.Size(319, 23);
+            this.dtpCustomer.TabIndex = 34;
             // 
             // label14
             // 
@@ -361,9 +303,9 @@ namespace Flower_Store
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(861, 152);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 15);
+            this.label14.Size = new System.Drawing.Size(90, 15);
             this.label14.TabIndex = 33;
-            this.label14.Text = "Supply Date:";
+            this.label14.Text = "Purchase Date:";
             // 
             // label13
             // 
@@ -375,12 +317,13 @@ namespace Flower_Store
             this.label13.TabIndex = 32;
             this.label13.Text = "Customer:";
             // 
-            // textBox10
+            // txtTotalpriceE
             // 
-            this.textBox10.Location = new System.Drawing.Point(961, 92);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 23);
-            this.textBox10.TabIndex = 31;
+            this.txtTotalpriceE.Location = new System.Drawing.Point(961, 92);
+            this.txtTotalpriceE.Name = "txtTotalpriceE";
+            this.txtTotalpriceE.ReadOnly = true;
+            this.txtTotalpriceE.Size = new System.Drawing.Size(164, 23);
+            this.txtTotalpriceE.TabIndex = 31;
             // 
             // label10
             // 
@@ -392,12 +335,12 @@ namespace Flower_Store
             this.label10.TabIndex = 30;
             this.label10.Text = "Total Price:";
             // 
-            // textBox12
+            // txtPhoneE
             // 
-            this.textBox12.Location = new System.Drawing.Point(204, 144);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(161, 23);
-            this.textBox12.TabIndex = 27;
+            this.txtPhoneE.Location = new System.Drawing.Point(204, 144);
+            this.txtPhoneE.Name = "txtPhoneE";
+            this.txtPhoneE.Size = new System.Drawing.Size(161, 23);
+            this.txtPhoneE.TabIndex = 27;
             // 
             // label12
             // 
@@ -409,12 +352,12 @@ namespace Flower_Store
             this.label12.TabIndex = 26;
             this.label12.Text = "Phone Number:";
             // 
-            // textBox8
+            // txtUnitpriceE
             // 
-            this.textBox8.Location = new System.Drawing.Point(490, 144);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(259, 23);
-            this.textBox8.TabIndex = 25;
+            this.txtUnitpriceE.Location = new System.Drawing.Point(490, 144);
+            this.txtUnitpriceE.Name = "txtUnitpriceE";
+            this.txtUnitpriceE.Size = new System.Drawing.Size(259, 23);
+            this.txtUnitpriceE.TabIndex = 25;
             // 
             // label8
             // 
@@ -426,12 +369,12 @@ namespace Flower_Store
             this.label8.TabIndex = 24;
             this.label8.Text = "Unit Price:";
             // 
-            // textBox9
+            // txtQuantityE
             // 
-            this.textBox9.Location = new System.Drawing.Point(961, 39);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(218, 23);
-            this.textBox9.TabIndex = 23;
+            this.txtQuantityE.Location = new System.Drawing.Point(961, 39);
+            this.txtQuantityE.Name = "txtQuantityE";
+            this.txtQuantityE.Size = new System.Drawing.Size(218, 23);
+            this.txtQuantityE.TabIndex = 23;
             // 
             // label9
             // 
@@ -456,12 +399,12 @@ namespace Flower_Store
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // textBox7
+            // txtProductE
             // 
-            this.textBox7.Location = new System.Drawing.Point(490, 87);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(305, 23);
-            this.textBox7.TabIndex = 20;
+            this.txtProductE.Location = new System.Drawing.Point(490, 87);
+            this.txtProductE.Name = "txtProductE";
+            this.txtProductE.Size = new System.Drawing.Size(305, 23);
+            this.txtProductE.TabIndex = 20;
             // 
             // label6
             // 
@@ -499,12 +442,12 @@ namespace Flower_Store
             this.button5.Text = "Update";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtCustomerE
             // 
-            this.textBox4.Location = new System.Drawing.Point(204, 87);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 23);
-            this.textBox4.TabIndex = 16;
+            this.txtCustomerE.Location = new System.Drawing.Point(204, 87);
+            this.txtCustomerE.Name = "txtCustomerE";
+            this.txtCustomerE.Size = new System.Drawing.Size(161, 23);
+            this.txtCustomerE.TabIndex = 16;
             // 
             // label3
             // 
@@ -515,12 +458,12 @@ namespace Flower_Store
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 15;
             // 
-            // textBox5
+            // txtAddressE
             // 
-            this.textBox5.Location = new System.Drawing.Point(490, 39);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(305, 23);
-            this.textBox5.TabIndex = 13;
+            this.txtAddressE.Location = new System.Drawing.Point(490, 39);
+            this.txtAddressE.Name = "txtAddressE";
+            this.txtAddressE.Size = new System.Drawing.Size(305, 23);
+            this.txtAddressE.TabIndex = 13;
             // 
             // label4
             // 
@@ -532,13 +475,13 @@ namespace Flower_Store
             this.label4.TabIndex = 12;
             this.label4.Text = "Address:";
             // 
-            // textBox6
+            // txtIdE
             // 
-            this.textBox6.Location = new System.Drawing.Point(204, 39);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(161, 23);
-            this.textBox6.TabIndex = 11;
+            this.txtIdE.Location = new System.Drawing.Point(204, 39);
+            this.txtIdE.Name = "txtIdE";
+            this.txtIdE.ReadOnly = true;
+            this.txtIdE.Size = new System.Drawing.Size(161, 23);
+            this.txtIdE.TabIndex = 11;
             // 
             // label5
             // 
@@ -550,22 +493,98 @@ namespace Flower_Store
             this.label5.TabIndex = 10;
             this.label5.Text = "ID:";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "ID";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Customer";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Gender";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 75;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone Number";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Address";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Product";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 150;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Quantity";
+            this.Column9.Name = "Column9";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Unit Price";
+            this.Column8.Name = "Column8";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Total Price";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Purchase Date";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 200;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(947, 221);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(95, 38);
+            this.btnClose.TabIndex = 43;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1433, 1018);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerManagement";
             this.Text = "CustomerManagement";
             this.Load += new System.EventHandler(this.CustomerManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -575,39 +594,39 @@ namespace Flower_Store
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.TextBox txtCustomerF;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdF;
         private System.Windows.Forms.Label id;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPhoneF;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCustomer;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpCustomer;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtTotalpriceE;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtPhoneE;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtUnitpriceE;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtQuantityE;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtProductE;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCustomerE;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtAddressE;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtIdE;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -623,5 +642,6 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.Button btnClose;
     }
 }
