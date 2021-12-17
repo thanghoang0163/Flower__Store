@@ -573,7 +573,7 @@ namespace Flower_Store
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1455, 1048);
             this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label7);
