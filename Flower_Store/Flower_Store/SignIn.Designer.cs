@@ -70,6 +70,7 @@ namespace Flower_Store
             // 
             this.txtPassword.Location = new System.Drawing.Point(170, 152);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(190, 23);
             this.txtPassword.TabIndex = 6;
             // 
@@ -97,6 +98,7 @@ namespace Flower_Store
             this.btnSignin.TabIndex = 8;
             this.btnSignin.Text = "Sign in";
             this.btnSignin.UseVisualStyleBackColor = false;
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
             // btnExit
             // 

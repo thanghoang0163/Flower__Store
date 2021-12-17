@@ -35,14 +35,14 @@ namespace Flower_Store
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.involcecToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.SupplierMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.EmployeeMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.CustomerMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.InventoryMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.InvoiceMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +56,12 @@ namespace Flower_Store
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.systemToolStripMenuItem,
-            this.exportToolStripMenuItem,
-            this.exportToolStripMenuItem1,
-            this.helpToolStripMenuItem,
-            this.exportToolStripMenuItem2,
-            this.helpToolStripMenuItem1,
-            this.helpToolStripMenuItem2});
+            this.SupplierMenu,
+            this.EmployeeMenu,
+            this.CustomerMenu,
+            this.InventoryMenu,
+            this.ExportMenu,
+            this.HelpMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1279, 24);
@@ -80,66 +80,70 @@ namespace Flower_Store
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // exportToolStripMenuItem
+            // SupplierMenu
             // 
-            this.exportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
-            this.exportToolStripMenuItem.Text = "Supplier Management";
+            this.SupplierMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SupplierMenu.Name = "SupplierMenu";
+            this.SupplierMenu.Size = new System.Drawing.Size(137, 20);
+            this.SupplierMenu.Text = "Supplier Management";
+            this.SupplierMenu.Click += new System.EventHandler(this.SupplierMenu_Click);
             // 
-            // exportToolStripMenuItem1
+            // EmployeeMenu
             // 
-            this.exportToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.exportToolStripMenuItem1.Name = "exportToolStripMenuItem1";
-            this.exportToolStripMenuItem1.Size = new System.Drawing.Size(145, 20);
-            this.exportToolStripMenuItem1.Text = "Employee Management";
+            this.EmployeeMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EmployeeMenu.Name = "EmployeeMenu";
+            this.EmployeeMenu.Size = new System.Drawing.Size(145, 20);
+            this.EmployeeMenu.Text = "Employee Management";
+            this.EmployeeMenu.Click += new System.EventHandler(this.EmployeeMenu_Click);
             // 
-            // helpToolStripMenuItem
+            // CustomerMenu
             // 
-            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
-            this.helpToolStripMenuItem.Text = "Customer Management";
+            this.CustomerMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CustomerMenu.Name = "CustomerMenu";
+            this.CustomerMenu.Size = new System.Drawing.Size(144, 20);
+            this.CustomerMenu.Text = "Customer Management";
+            this.CustomerMenu.Click += new System.EventHandler(this.CustomerMenu_Click);
             // 
-            // exportToolStripMenuItem2
+            // InventoryMenu
             // 
-            this.exportToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.exportToolStripMenuItem2.Name = "exportToolStripMenuItem2";
-            this.exportToolStripMenuItem2.Size = new System.Drawing.Size(144, 20);
-            this.exportToolStripMenuItem2.Text = "Inventory Management";
+            this.InventoryMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.InventoryMenu.Name = "InventoryMenu";
+            this.InventoryMenu.Size = new System.Drawing.Size(144, 20);
+            this.InventoryMenu.Text = "Inventory Management";
+            this.InventoryMenu.Click += new System.EventHandler(this.InventoryMenu_Click);
             // 
-            // helpToolStripMenuItem1
+            // ExportMenu
             // 
-            this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.involcecToolStripMenuItem,
-            this.reportToolStripMenuItem});
-            this.helpToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(53, 20);
-            this.helpToolStripMenuItem1.Text = "Export";
+            this.ExportMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InvoiceMenu,
+            this.ReportMenu});
+            this.ExportMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExportMenu.Name = "ExportMenu";
+            this.ExportMenu.Size = new System.Drawing.Size(53, 20);
+            this.ExportMenu.Text = "Export";
             // 
-            // involcecToolStripMenuItem
+            // InvoiceMenu
             // 
-            this.involcecToolStripMenuItem.Name = "involcecToolStripMenuItem";
-            this.involcecToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.involcecToolStripMenuItem.Text = "Invoice";
+            this.InvoiceMenu.Name = "InvoiceMenu";
+            this.InvoiceMenu.Size = new System.Drawing.Size(180, 22);
+            this.InvoiceMenu.Text = "Invoice";
             // 
-            // reportToolStripMenuItem
+            // ReportMenu
             // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.reportToolStripMenuItem.Text = "Report";
+            this.ReportMenu.Name = "ReportMenu";
+            this.ReportMenu.Size = new System.Drawing.Size(180, 22);
+            this.ReportMenu.Text = "Report";
             // 
-            // helpToolStripMenuItem2
+            // HelpMenu
             // 
-            this.helpToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.helpToolStripMenuItem2.Name = "helpToolStripMenuItem2";
-            this.helpToolStripMenuItem2.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem2.Text = "Help";
+            this.HelpMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HelpMenu.Name = "HelpMenu";
+            this.HelpMenu.Size = new System.Drawing.Size(44, 20);
+            this.HelpMenu.Text = "Help";
             // 
             // imageList1
             // 
@@ -158,6 +162,7 @@ namespace Flower_Store
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -171,14 +176,14 @@ namespace Flower_Store
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SupplierMenu;
+        private System.Windows.Forms.ToolStripMenuItem EmployeeMenu;
+        private System.Windows.Forms.ToolStripMenuItem CustomerMenu;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem involcecToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem InventoryMenu;
+        private System.Windows.Forms.ToolStripMenuItem ExportMenu;
+        private System.Windows.Forms.ToolStripMenuItem HelpMenu;
+        private System.Windows.Forms.ToolStripMenuItem InvoiceMenu;
+        private System.Windows.Forms.ToolStripMenuItem ReportMenu;
     }
 }

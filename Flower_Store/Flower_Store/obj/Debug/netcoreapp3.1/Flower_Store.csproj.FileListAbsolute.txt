@@ -61,3 +61,10 @@ C:\Users\Admin\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debu
 C:\Users\Admin\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.dll
 C:\Users\Admin\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.pdb
 C:\Users\Admin\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.genruntimeconfig.cache
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.csproj.CopyComplete

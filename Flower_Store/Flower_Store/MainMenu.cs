@@ -19,5 +19,34 @@ namespace Flower_Store
         {
             this.Close();
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SupplierMenu_Click(object sender, EventArgs e)
+        {
+            SupplierManagement supplier = new SupplierManagement();
+            supplier.Show();
+        }
+
+        private void EmployeeMenu_Click(object sender, EventArgs e)
+        {
+            EmployeeManagement employee = new EmployeeManagement();
+            employee.Show();
+        }
+
+        private void CustomerMenu_Click(object sender, EventArgs e)
+        {
+            CustomerManagement customer = new CustomerManagement();
+            customer.Show();
+        }
+
+        private void InventoryMenu_Click(object sender, EventArgs e)
+        {
+            InventoryManagement inventory = new InventoryManagement();
+            inventory.Show();
+        }
     }
 }
