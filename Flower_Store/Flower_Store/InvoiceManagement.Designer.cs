@@ -122,7 +122,7 @@ namespace Flower_Store
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(479, 163);
+            this.textBox5.Location = new System.Drawing.Point(449, 163);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 23);
             this.textBox5.TabIndex = 46;
@@ -130,7 +130,7 @@ namespace Flower_Store
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(403, 171);
+            this.label7.Location = new System.Drawing.Point(373, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 15);
             this.label7.TabIndex = 45;
@@ -138,8 +138,8 @@ namespace Flower_Store
             // 
             // dtpInvoice
             // 
-            this.dtpInvoice.CustomFormat = "MM/dd/yyyy   hh:mm:ss tt";
-            this.dtpInvoice.Location = new System.Drawing.Point(141, 163);
+            this.dtpInvoice.CustomFormat = "MM/dd/yyyy   hh:mm";
+            this.dtpInvoice.Location = new System.Drawing.Point(111, 163);
             this.dtpInvoice.Name = "dtpInvoice";
             this.dtpInvoice.Size = new System.Drawing.Size(200, 23);
             this.dtpInvoice.TabIndex = 44;
@@ -147,7 +147,7 @@ namespace Flower_Store
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 171);
+            this.label2.Location = new System.Drawing.Point(24, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 43;

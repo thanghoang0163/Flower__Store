@@ -43,43 +43,35 @@ namespace Flower_Store
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnReload = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dtpSupplier = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtTotalpriceE = new System.Windows.Forms.TextBox();
+            this.txtTotalprice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtPhoneE = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtUnitpriceE = new System.Windows.Forms.TextBox();
+            this.txtUnitprice = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtQuantityE = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.txtProductE = new System.Windows.Forms.TextBox();
+            this.txtProduct = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtSupplier = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAddressE = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtIdE = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbSupplier = new System.Windows.Forms.ComboBox();
-            this.txtPhoneF = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnReload = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIdF = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -107,7 +99,7 @@ namespace Flower_Store
             this.Column8,
             this.Column10,
             this.Column11});
-            this.dgvSupplier.Location = new System.Drawing.Point(71, 230);
+            this.dgvSupplier.Location = new System.Drawing.Point(71, 426);
             this.dgvSupplier.Name = "dgvSupplier";
             this.dgvSupplier.RowTemplate.Height = 25;
             this.dgvSupplier.Size = new System.Drawing.Size(1325, 310);
@@ -174,64 +166,39 @@ namespace Flower_Store
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.groupBox3.Controls.Add(this.btnReload);
-            this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.btnFind);
+            this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.dtpSupplier);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.txtTotalpriceE);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.txtPhoneE);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txtUnitpriceE);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtQuantityE);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.btnAdd);
-            this.groupBox3.Controls.Add(this.txtProductE);
-            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btnDelete);
+            this.groupBox3.Controls.Add(this.dtpSupplier);
             this.groupBox3.Controls.Add(this.btnUpdate);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.btnAdd);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.txtTotalprice);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.txtPhone);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.txtUnitprice);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.txtQuantity);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txtProduct);
+            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.txtSupplier);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.txtAddressE);
+            this.groupBox3.Controls.Add(this.txtAddress);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txtIdE);
+            this.groupBox3.Controls.Add(this.txtId);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(71, 559);
+            this.groupBox3.Location = new System.Drawing.Point(71, 107);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1325, 296);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Supplier";
-            // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
-            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(833, 233);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(96, 35);
-            this.btnReload.TabIndex = 44;
-            this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(672, 233);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(96, 35);
-            this.btnClose.TabIndex = 43;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // label11
             // 
@@ -255,10 +222,10 @@ namespace Flower_Store
             // 
             // dtpSupplier
             // 
-            this.dtpSupplier.CustomFormat = "MM/dd/yyyy   hh:mm:ss tt";
+            this.dtpSupplier.CustomFormat = "MM/dd/yyyy   hh:mm";
             this.dtpSupplier.Location = new System.Drawing.Point(957, 146);
             this.dtpSupplier.Name = "dtpSupplier";
-            this.dtpSupplier.Size = new System.Drawing.Size(319, 23);
+            this.dtpSupplier.Size = new System.Drawing.Size(229, 23);
             this.dtpSupplier.TabIndex = 34;
             // 
             // label14
@@ -281,13 +248,13 @@ namespace Flower_Store
             this.label13.TabIndex = 32;
             this.label13.Text = "Supplier:";
             // 
-            // txtTotalpriceE
+            // txtTotalprice
             // 
-            this.txtTotalpriceE.Location = new System.Drawing.Point(961, 92);
-            this.txtTotalpriceE.Name = "txtTotalpriceE";
-            this.txtTotalpriceE.ReadOnly = true;
-            this.txtTotalpriceE.Size = new System.Drawing.Size(164, 23);
-            this.txtTotalpriceE.TabIndex = 31;
+            this.txtTotalprice.Location = new System.Drawing.Point(961, 92);
+            this.txtTotalprice.Name = "txtTotalprice";
+            this.txtTotalprice.ReadOnly = true;
+            this.txtTotalprice.Size = new System.Drawing.Size(164, 23);
+            this.txtTotalprice.TabIndex = 31;
             // 
             // label10
             // 
@@ -299,12 +266,12 @@ namespace Flower_Store
             this.label10.TabIndex = 30;
             this.label10.Text = "Total Price:";
             // 
-            // txtPhoneE
+            // txtPhone
             // 
-            this.txtPhoneE.Location = new System.Drawing.Point(204, 144);
-            this.txtPhoneE.Name = "txtPhoneE";
-            this.txtPhoneE.Size = new System.Drawing.Size(161, 23);
-            this.txtPhoneE.TabIndex = 27;
+            this.txtPhone.Location = new System.Drawing.Point(204, 144);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(161, 23);
+            this.txtPhone.TabIndex = 27;
             // 
             // label12
             // 
@@ -316,12 +283,12 @@ namespace Flower_Store
             this.label12.TabIndex = 26;
             this.label12.Text = "Phone Number:";
             // 
-            // txtUnitpriceE
+            // txtUnitprice
             // 
-            this.txtUnitpriceE.Location = new System.Drawing.Point(490, 144);
-            this.txtUnitpriceE.Name = "txtUnitpriceE";
-            this.txtUnitpriceE.Size = new System.Drawing.Size(259, 23);
-            this.txtUnitpriceE.TabIndex = 25;
+            this.txtUnitprice.Location = new System.Drawing.Point(490, 144);
+            this.txtUnitprice.Name = "txtUnitprice";
+            this.txtUnitprice.Size = new System.Drawing.Size(259, 23);
+            this.txtUnitprice.TabIndex = 25;
             // 
             // label8
             // 
@@ -333,12 +300,12 @@ namespace Flower_Store
             this.label8.TabIndex = 24;
             this.label8.Text = "Unit Price:";
             // 
-            // txtQuantityE
+            // txtQuantity
             // 
-            this.txtQuantityE.Location = new System.Drawing.Point(961, 39);
-            this.txtQuantityE.Name = "txtQuantityE";
-            this.txtQuantityE.Size = new System.Drawing.Size(218, 23);
-            this.txtQuantityE.TabIndex = 23;
+            this.txtQuantity.Location = new System.Drawing.Point(961, 39);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(218, 23);
+            this.txtQuantity.TabIndex = 23;
             // 
             // label9
             // 
@@ -350,25 +317,12 @@ namespace Flower_Store
             this.label9.TabIndex = 22;
             this.label9.Text = "Quantity:";
             // 
-            // btnAdd
+            // txtProduct
             // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(231, 231);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(99, 38);
-            this.btnAdd.TabIndex = 21;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // txtProductE
-            // 
-            this.txtProductE.Location = new System.Drawing.Point(490, 87);
-            this.txtProductE.Name = "txtProductE";
-            this.txtProductE.Size = new System.Drawing.Size(305, 23);
-            this.txtProductE.TabIndex = 20;
+            this.txtProduct.Location = new System.Drawing.Point(490, 87);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.Size = new System.Drawing.Size(305, 23);
+            this.txtProduct.TabIndex = 20;
             // 
             // label6
             // 
@@ -379,32 +333,6 @@ namespace Flower_Store
             this.label6.Size = new System.Drawing.Size(54, 15);
             this.label6.TabIndex = 19;
             this.label6.Text = "Product:";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(522, 231);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(99, 38);
-            this.btnDelete.TabIndex = 18;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(374, 231);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(99, 38);
-            this.btnUpdate.TabIndex = 17;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // txtSupplier
             // 
@@ -422,12 +350,12 @@ namespace Flower_Store
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 15;
             // 
-            // txtAddressE
+            // txtAddress
             // 
-            this.txtAddressE.Location = new System.Drawing.Point(490, 39);
-            this.txtAddressE.Name = "txtAddressE";
-            this.txtAddressE.Size = new System.Drawing.Size(305, 23);
-            this.txtAddressE.TabIndex = 13;
+            this.txtAddress.Location = new System.Drawing.Point(490, 39);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(305, 23);
+            this.txtAddress.TabIndex = 13;
             // 
             // label4
             // 
@@ -439,13 +367,12 @@ namespace Flower_Store
             this.label4.TabIndex = 12;
             this.label4.Text = "Address:";
             // 
-            // txtIdE
+            // txtId
             // 
-            this.txtIdE.Location = new System.Drawing.Point(204, 39);
-            this.txtIdE.Name = "txtIdE";
-            this.txtIdE.ReadOnly = true;
-            this.txtIdE.Size = new System.Drawing.Size(161, 23);
-            this.txtIdE.TabIndex = 11;
+            this.txtId.Location = new System.Drawing.Point(204, 39);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(161, 23);
+            this.txtId.TabIndex = 11;
             // 
             // label5
             // 
@@ -457,47 +384,18 @@ namespace Flower_Store
             this.label5.TabIndex = 10;
             this.label5.Text = "ID:";
             // 
-            // groupBox1
+            // btnReload
             // 
-            this.groupBox1.Controls.Add(this.cbSupplier);
-            this.groupBox1.Controls.Add(this.txtPhoneF);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnFind);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtIdF);
-            this.groupBox1.Controls.Add(this.id);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(71, 108);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1325, 104);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Find Supplier";
-            // 
-            // cbSupplier
-            // 
-            this.cbSupplier.FormattingEnabled = true;
-            this.cbSupplier.Location = new System.Drawing.Point(374, 42);
-            this.cbSupplier.Name = "cbSupplier";
-            this.cbSupplier.Size = new System.Drawing.Size(223, 23);
-            this.cbSupplier.TabIndex = 17;
-            // 
-            // txtPhoneF
-            // 
-            this.txtPhoneF.Location = new System.Drawing.Point(753, 42);
-            this.txtPhoneF.Name = "txtPhoneF";
-            this.txtPhoneF.Size = new System.Drawing.Size(122, 23);
-            this.txtPhoneF.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoEllipsis = true;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(653, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 15);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Phone Number:";
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(802, 224);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(101, 38);
+            this.btnReload.TabIndex = 51;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
             // 
             // btnFind
             // 
@@ -505,58 +403,80 @@ namespace Flower_Store
             this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(989, 33);
+            this.btnFind.Location = new System.Drawing.Point(650, 224);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
-            this.btnFind.TabIndex = 14;
+            this.btnFind.TabIndex = 46;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btnClose
             // 
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(312, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Supplier:";
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(955, 224);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(95, 38);
+            this.btnClose.TabIndex = 50;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // txtIdF
+            // btnDelete
             // 
-            this.txtIdF.Location = new System.Drawing.Point(125, 42);
-            this.txtIdF.Name = "txtIdF";
-            this.txtIdF.Size = new System.Drawing.Size(122, 23);
-            this.txtIdF.TabIndex = 11;
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(503, 224);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(99, 38);
+            this.btnDelete.TabIndex = 49;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // id
+            // btnUpdate
             // 
-            this.id.AutoEllipsis = true;
-            this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(67, 50);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(23, 15);
-            this.id.TabIndex = 10;
-            this.id.Text = "ID:";
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(355, 224);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(99, 38);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(217, 224);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(99, 38);
+            this.btnAdd.TabIndex = 47;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // SupplierManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1469, 886);
+            this.ClientSize = new System.Drawing.Size(1469, 759);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvSupplier);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SupplierManagement";
             this.Text = "SupplierManagement";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,38 +487,27 @@ namespace Flower_Store
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvSupplier;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtProductE;
+        private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtSupplier;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtAddressE;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIdE;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPhoneF;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdF;
-        private System.Windows.Forms.Label id;
-        private System.Windows.Forms.TextBox txtUnitpriceE;
+        private System.Windows.Forms.TextBox txtUnitprice;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtQuantityE;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtTotalpriceE;
+        private System.Windows.Forms.TextBox txtTotalprice;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPhoneE;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dtpSupplier;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbSupplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -609,7 +518,11 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

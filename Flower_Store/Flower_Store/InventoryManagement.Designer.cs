@@ -31,30 +31,25 @@ namespace Flower_Store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryManagement));
             this.label11 = new System.Windows.Forms.Label();
-            this.txtTotalQuantityE = new System.Windows.Forms.TextBox();
+            this.txtTotalQuantity = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtUnitpriceE = new System.Windows.Forms.TextBox();
+            this.txtUnitprice = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtRemainingQuantityE = new System.Windows.Forms.TextBox();
+            this.txtRemainingQuantity = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtProductE = new System.Windows.Forms.TextBox();
+            this.txtProduct = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtIdE = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSoldQuantityE = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbProduct = new System.Windows.Forms.ComboBox();
+            this.txtSoldQuantity = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIdF = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +60,6 @@ namespace Flower_Store
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,13 +73,13 @@ namespace Flower_Store
             this.label11.TabIndex = 25;
             this.label11.Text = "Total Quantity:";
             // 
-            // txtTotalQuantityE
+            // txtTotalQuantity
             // 
-            this.txtTotalQuantityE.Location = new System.Drawing.Point(573, 127);
-            this.txtTotalQuantityE.Name = "txtTotalQuantityE";
-            this.txtTotalQuantityE.ReadOnly = true;
-            this.txtTotalQuantityE.Size = new System.Drawing.Size(185, 23);
-            this.txtTotalQuantityE.TabIndex = 24;
+            this.txtTotalQuantity.Location = new System.Drawing.Point(573, 127);
+            this.txtTotalQuantity.Name = "txtTotalQuantity";
+            this.txtTotalQuantity.ReadOnly = true;
+            this.txtTotalQuantity.Size = new System.Drawing.Size(185, 23);
+            this.txtTotalQuantity.TabIndex = 24;
             // 
             // label10
             // 
@@ -97,12 +91,12 @@ namespace Flower_Store
             this.label10.TabIndex = 23;
             this.label10.Text = "Sold Quantity:";
             // 
-            // txtUnitpriceE
+            // txtUnitprice
             // 
-            this.txtUnitpriceE.Location = new System.Drawing.Point(187, 127);
-            this.txtUnitpriceE.Name = "txtUnitpriceE";
-            this.txtUnitpriceE.Size = new System.Drawing.Size(121, 23);
-            this.txtUnitpriceE.TabIndex = 22;
+            this.txtUnitprice.Location = new System.Drawing.Point(187, 127);
+            this.txtUnitprice.Name = "txtUnitprice";
+            this.txtUnitprice.Size = new System.Drawing.Size(121, 23);
+            this.txtUnitprice.TabIndex = 22;
             // 
             // label9
             // 
@@ -114,12 +108,12 @@ namespace Flower_Store
             this.label9.TabIndex = 21;
             this.label9.Text = "Remaining Quantity:";
             // 
-            // txtRemainingQuantityE
+            // txtRemainingQuantity
             // 
-            this.txtRemainingQuantityE.Location = new System.Drawing.Point(573, 81);
-            this.txtRemainingQuantityE.Name = "txtRemainingQuantityE";
-            this.txtRemainingQuantityE.Size = new System.Drawing.Size(185, 23);
-            this.txtRemainingQuantityE.TabIndex = 20;
+            this.txtRemainingQuantity.Location = new System.Drawing.Point(573, 81);
+            this.txtRemainingQuantity.Name = "txtRemainingQuantity";
+            this.txtRemainingQuantity.Size = new System.Drawing.Size(185, 23);
+            this.txtRemainingQuantity.TabIndex = 20;
             // 
             // label7
             // 
@@ -137,7 +131,7 @@ namespace Flower_Store
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(381, 204);
+            this.btnDelete.Location = new System.Drawing.Point(316, 207);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 18;
@@ -150,19 +144,19 @@ namespace Flower_Store
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(233, 204);
+            this.btnUpdate.Location = new System.Drawing.Point(168, 207);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(99, 38);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // txtProductE
+            // txtProduct
             // 
-            this.txtProductE.Location = new System.Drawing.Point(187, 81);
-            this.txtProductE.Name = "txtProductE";
-            this.txtProductE.Size = new System.Drawing.Size(169, 23);
-            this.txtProductE.TabIndex = 16;
+            this.txtProduct.Location = new System.Drawing.Point(187, 81);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.Size = new System.Drawing.Size(169, 23);
+            this.txtProduct.TabIndex = 16;
             // 
             // btnAdd
             // 
@@ -170,7 +164,7 @@ namespace Flower_Store
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(95, 204);
+            this.btnAdd.Location = new System.Drawing.Point(30, 207);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(99, 38);
             this.btnAdd.TabIndex = 14;
@@ -188,13 +182,12 @@ namespace Flower_Store
             this.label6.Text = "Product:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // txtIdE
+            // txtId
             // 
-            this.txtIdE.Location = new System.Drawing.Point(187, 33);
-            this.txtIdE.Name = "txtIdE";
-            this.txtIdE.ReadOnly = true;
-            this.txtIdE.Size = new System.Drawing.Size(169, 23);
-            this.txtIdE.TabIndex = 11;
+            this.txtId.Location = new System.Drawing.Point(187, 33);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(169, 23);
+            this.txtId.TabIndex = 11;
             // 
             // label8
             // 
@@ -209,25 +202,26 @@ namespace Flower_Store
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnReload);
+            this.groupBox3.Controls.Add(this.btnFind);
             this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.txtTotalQuantityE);
+            this.groupBox3.Controls.Add(this.txtTotalQuantity);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.txtUnitpriceE);
+            this.groupBox3.Controls.Add(this.txtUnitprice);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.txtRemainingQuantityE);
+            this.groupBox3.Controls.Add(this.txtRemainingQuantity);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.btnDelete);
             this.groupBox3.Controls.Add(this.btnUpdate);
-            this.groupBox3.Controls.Add(this.txtProductE);
+            this.groupBox3.Controls.Add(this.txtProduct);
             this.groupBox3.Controls.Add(this.btnAdd);
-            this.groupBox3.Controls.Add(this.txtSoldQuantityE);
+            this.groupBox3.Controls.Add(this.txtSoldQuantity);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.txtIdE);
+            this.groupBox3.Controls.Add(this.txtId);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(54, 561);
+            this.groupBox3.Location = new System.Drawing.Point(54, 95);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(917, 272);
             this.groupBox3.TabIndex = 27;
@@ -240,9 +234,9 @@ namespace Flower_Store
             this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(691, 204);
+            this.btnReload.Location = new System.Drawing.Point(615, 207);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(96, 35);
+            this.btnReload.Size = new System.Drawing.Size(101, 38);
             this.btnReload.TabIndex = 45;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = false;
@@ -253,7 +247,7 @@ namespace Flower_Store
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(535, 204);
+            this.btnClose.Location = new System.Drawing.Point(768, 207);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(95, 38);
             this.btnClose.TabIndex = 44;
@@ -270,35 +264,12 @@ namespace Flower_Store
             this.label2.TabIndex = 26;
             this.label2.Text = "VND";
             // 
-            // txtSoldQuantityE
+            // txtSoldQuantity
             // 
-            this.txtSoldQuantityE.Location = new System.Drawing.Point(573, 33);
-            this.txtSoldQuantityE.Name = "txtSoldQuantityE";
-            this.txtSoldQuantityE.Size = new System.Drawing.Size(185, 23);
-            this.txtSoldQuantityE.TabIndex = 13;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbProduct);
-            this.groupBox1.Controls.Add(this.btnFind);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtIdF);
-            this.groupBox1.Controls.Add(this.id);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(54, 103);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(917, 108);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Find Flower";
-            // 
-            // cbProduct
-            // 
-            this.cbProduct.FormattingEnabled = true;
-            this.cbProduct.Location = new System.Drawing.Point(374, 48);
-            this.cbProduct.Name = "cbProduct";
-            this.cbProduct.Size = new System.Drawing.Size(187, 23);
-            this.cbProduct.TabIndex = 15;
+            this.txtSoldQuantity.Location = new System.Drawing.Point(573, 33);
+            this.txtSoldQuantity.Name = "txtSoldQuantity";
+            this.txtSoldQuantity.Size = new System.Drawing.Size(185, 23);
+            this.txtSoldQuantity.TabIndex = 13;
             // 
             // btnFind
             // 
@@ -306,39 +277,12 @@ namespace Flower_Store
             this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(622, 39);
+            this.btnFind.Location = new System.Drawing.Point(463, 207);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
             this.btnFind.TabIndex = 14;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(305, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Product:";
-            // 
-            // txtIdF
-            // 
-            this.txtIdF.Location = new System.Drawing.Point(126, 48);
-            this.txtIdF.Name = "txtIdF";
-            this.txtIdF.Size = new System.Drawing.Size(122, 23);
-            this.txtIdF.TabIndex = 11;
-            // 
-            // id
-            // 
-            this.id.AutoEllipsis = true;
-            this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(68, 56);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(23, 15);
-            this.id.TabIndex = 10;
-            this.id.Text = "ID:";
             // 
             // label3
             // 
@@ -362,7 +306,7 @@ namespace Flower_Store
             this.Column8,
             this.Column7,
             this.Column6});
-            this.dgvInventory.Location = new System.Drawing.Point(54, 227);
+            this.dgvInventory.Location = new System.Drawing.Point(54, 394);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowTemplate.Height = 25;
             this.dgvInventory.Size = new System.Drawing.Size(917, 310);
@@ -414,18 +358,15 @@ namespace Flower_Store
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1068, 843);
+            this.ClientSize = new System.Drawing.Size(1068, 742);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InventoryManagement";
             this.Text = "InventoryManagement";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -434,29 +375,24 @@ namespace Flower_Store
 
         #endregion
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtTotalQuantityE;
+        private System.Windows.Forms.TextBox txtTotalQuantity;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtUnitpriceE;
+        private System.Windows.Forms.TextBox txtUnitprice;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtRemainingQuantityE;
+        private System.Windows.Forms.TextBox txtRemainingQuantity;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtProductE;
+        private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtIdE;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtSoldQuantityE;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtSoldQuantity;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdF;
-        private System.Windows.Forms.Label id;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbProduct;
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
