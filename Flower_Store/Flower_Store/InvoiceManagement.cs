@@ -19,5 +19,10 @@ namespace Flower_Store
         {
 
         }
+
+        private void dtpInvoice_ValueChanged(object sender, EventArgs e)
+        {
+            dtpInvoice.CustomFormat = "ddd, dd/MM/yyyy  hh:mm";
+        }
     }
 }

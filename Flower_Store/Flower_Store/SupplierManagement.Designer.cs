@@ -43,10 +43,16 @@ namespace Flower_Store
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnReload = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.dtpSupplier = new System.Windows.Forms.DateTimePicker();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtTotalprice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,12 +70,6 @@ namespace Flower_Store
             this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnReload = new System.Windows.Forms.Button();
-            this.btnFind = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -200,6 +200,19 @@ namespace Flower_Store
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Supplier";
             // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(802, 224);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(101, 38);
+            this.btnReload.TabIndex = 51;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
+            // 
             // label11
             // 
             this.label11.AutoEllipsis = true;
@@ -209,6 +222,32 @@ namespace Flower_Store
             this.label11.Size = new System.Drawing.Size(33, 15);
             this.label11.TabIndex = 36;
             this.label11.Text = "VND";
+            // 
+            // btnFind
+            // 
+            this.btnFind.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
+            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFind.Location = new System.Drawing.Point(650, 224);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(99, 38);
+            this.btnFind.TabIndex = 46;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(955, 224);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(95, 38);
+            this.btnClose.TabIndex = 50;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // label15
             // 
@@ -220,13 +259,40 @@ namespace Flower_Store
             this.label15.TabIndex = 35;
             this.label15.Text = "VND";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(503, 224);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(99, 38);
+            this.btnDelete.TabIndex = 49;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
             // dtpSupplier
             // 
-            this.dtpSupplier.CustomFormat = "MM/dd/yyyy   hh:mm";
+            this.dtpSupplier.CustomFormat = "";
             this.dtpSupplier.Location = new System.Drawing.Point(957, 146);
             this.dtpSupplier.Name = "dtpSupplier";
             this.dtpSupplier.Size = new System.Drawing.Size(229, 23);
             this.dtpSupplier.TabIndex = 34;
+            this.dtpSupplier.ValueChanged += new System.EventHandler(this.dtpSupplier_ValueChanged);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(355, 224);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(99, 38);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -237,6 +303,19 @@ namespace Flower_Store
             this.label14.Size = new System.Drawing.Size(77, 15);
             this.label14.TabIndex = 33;
             this.label14.Text = "Supply Date:";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(217, 224);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(99, 38);
+            this.btnAdd.TabIndex = 47;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -383,84 +462,6 @@ namespace Flower_Store
             this.label5.Size = new System.Drawing.Size(23, 15);
             this.label5.TabIndex = 10;
             this.label5.Text = "ID:";
-            // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
-            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(802, 224);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(101, 38);
-            this.btnReload.TabIndex = 51;
-            this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = false;
-            // 
-            // btnFind
-            // 
-            this.btnFind.BackColor = System.Drawing.SystemColors.Control;
-            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
-            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(650, 224);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(99, 38);
-            this.btnFind.TabIndex = 46;
-            this.btnFind.Text = "Find";
-            this.btnFind.UseVisualStyleBackColor = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(955, 224);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(95, 38);
-            this.btnClose.TabIndex = 50;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(503, 224);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(99, 38);
-            this.btnDelete.TabIndex = 49;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(355, 224);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(99, 38);
-            this.btnUpdate.TabIndex = 48;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(217, 224);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(99, 38);
-            this.btnAdd.TabIndex = 47;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // SupplierManagement
             // 

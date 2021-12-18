@@ -138,11 +138,12 @@ namespace Flower_Store
             // 
             // dtpInvoice
             // 
-            this.dtpInvoice.CustomFormat = "MM/dd/yyyy   hh:mm";
+            this.dtpInvoice.CustomFormat = "";
             this.dtpInvoice.Location = new System.Drawing.Point(111, 163);
             this.dtpInvoice.Name = "dtpInvoice";
             this.dtpInvoice.Size = new System.Drawing.Size(200, 23);
             this.dtpInvoice.TabIndex = 44;
+            this.dtpInvoice.ValueChanged += new System.EventHandler(this.dtpInvoice_ValueChanged);
             // 
             // label2
             // 

@@ -46,10 +46,10 @@ namespace Flower_Store
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnReload = new System.Windows.Forms.Button();
+            this.btnFind = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSoldQuantity = new System.Windows.Forms.TextBox();
-            this.btnFind = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -241,6 +241,19 @@ namespace Flower_Store
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = false;
             // 
+            // btnFind
+            // 
+            this.btnFind.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
+            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFind.Location = new System.Drawing.Point(463, 207);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(99, 38);
+            this.btnFind.TabIndex = 14;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = false;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.Control;
@@ -271,19 +284,6 @@ namespace Flower_Store
             this.txtSoldQuantity.Size = new System.Drawing.Size(185, 23);
             this.txtSoldQuantity.TabIndex = 13;
             // 
-            // btnFind
-            // 
-            this.btnFind.BackColor = System.Drawing.SystemColors.Control;
-            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
-            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(463, 207);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(99, 38);
-            this.btnFind.TabIndex = 14;
-            this.btnFind.Text = "Find";
-            this.btnFind.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -309,7 +309,7 @@ namespace Flower_Store
             this.dgvInventory.Location = new System.Drawing.Point(54, 394);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowTemplate.Height = 25;
-            this.dgvInventory.Size = new System.Drawing.Size(917, 310);
+            this.dgvInventory.Size = new System.Drawing.Size(917, 204);
             this.dgvInventory.TabIndex = 0;
             // 
             // Column1
@@ -358,7 +358,7 @@ namespace Flower_Store
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1068, 742);
+            this.ClientSize = new System.Drawing.Size(1068, 643);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label3);

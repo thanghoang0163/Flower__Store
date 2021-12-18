@@ -104,10 +104,10 @@ namespace Flower_Store
             this.Column8,
             this.Column10,
             this.Column11});
-            this.dgvCustomer.Location = new System.Drawing.Point(49, 410);
+            this.dgvCustomer.Location = new System.Drawing.Point(49, 473);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowTemplate.Height = 25;
-            this.dgvCustomer.Size = new System.Drawing.Size(1325, 310);
+            this.dgvCustomer.Size = new System.Drawing.Size(1189, 216);
             this.dgvCustomer.TabIndex = 24;
             // 
             // Column1
@@ -207,7 +207,7 @@ namespace Flower_Store
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(49, 96);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1325, 277);
+            this.groupBox3.Size = new System.Drawing.Size(1189, 339);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Customer ";
@@ -218,7 +218,7 @@ namespace Flower_Store
             this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(1028, 210);
+            this.btnReload.Location = new System.Drawing.Point(748, 267);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(101, 38);
             this.btnReload.TabIndex = 51;
@@ -231,7 +231,7 @@ namespace Flower_Store
             this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(876, 210);
+            this.btnFind.Location = new System.Drawing.Point(596, 267);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
             this.btnFind.TabIndex = 46;
@@ -244,7 +244,7 @@ namespace Flower_Store
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1181, 210);
+            this.btnClose.Location = new System.Drawing.Point(901, 267);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(95, 38);
             this.btnClose.TabIndex = 50;
@@ -257,7 +257,7 @@ namespace Flower_Store
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(729, 210);
+            this.btnDelete.Location = new System.Drawing.Point(449, 267);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 49;
@@ -270,7 +270,7 @@ namespace Flower_Store
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(581, 210);
+            this.btnUpdate.Location = new System.Drawing.Point(301, 267);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(99, 38);
             this.btnUpdate.TabIndex = 48;
@@ -283,7 +283,7 @@ namespace Flower_Store
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(443, 210);
+            this.btnAdd.Location = new System.Drawing.Point(163, 267);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(99, 38);
             this.btnAdd.TabIndex = 47;
@@ -327,7 +327,7 @@ namespace Flower_Store
             // 
             this.label11.AutoEllipsis = true;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1146, 100);
+            this.label11.Location = new System.Drawing.Point(1086, 95);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 15);
             this.label11.TabIndex = 36;
@@ -337,7 +337,7 @@ namespace Flower_Store
             // 
             this.label15.AutoEllipsis = true;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(762, 152);
+            this.label15.Location = new System.Drawing.Point(703, 152);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(33, 15);
             this.label15.TabIndex = 35;
@@ -345,17 +345,18 @@ namespace Flower_Store
             // 
             // dtpCustomer
             // 
-            this.dtpCustomer.CustomFormat = "MM/dd/yyyy   hh:mm";
-            this.dtpCustomer.Location = new System.Drawing.Point(957, 146);
+            this.dtpCustomer.CustomFormat = "";
+            this.dtpCustomer.Location = new System.Drawing.Point(897, 141);
             this.dtpCustomer.Name = "dtpCustomer";
             this.dtpCustomer.Size = new System.Drawing.Size(222, 23);
             this.dtpCustomer.TabIndex = 34;
+            this.dtpCustomer.ValueChanged += new System.EventHandler(this.dtpCustomer_ValueChanged);
             // 
             // label14
             // 
             this.label14.AutoEllipsis = true;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(861, 152);
+            this.label14.Location = new System.Drawing.Point(801, 147);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 15);
             this.label14.TabIndex = 33;
@@ -373,7 +374,7 @@ namespace Flower_Store
             // 
             // txtTotalprice
             // 
-            this.txtTotalprice.Location = new System.Drawing.Point(961, 92);
+            this.txtTotalprice.Location = new System.Drawing.Point(901, 87);
             this.txtTotalprice.Name = "txtTotalprice";
             this.txtTotalprice.ReadOnly = true;
             this.txtTotalprice.Size = new System.Drawing.Size(164, 23);
@@ -383,7 +384,7 @@ namespace Flower_Store
             // 
             this.label10.AutoEllipsis = true;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(861, 100);
+            this.label10.Location = new System.Drawing.Point(801, 95);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 15);
             this.label10.TabIndex = 30;
@@ -410,7 +411,7 @@ namespace Flower_Store
             // 
             this.txtUnitprice.Location = new System.Drawing.Point(490, 144);
             this.txtUnitprice.Name = "txtUnitprice";
-            this.txtUnitprice.Size = new System.Drawing.Size(259, 23);
+            this.txtUnitprice.Size = new System.Drawing.Size(190, 23);
             this.txtUnitprice.TabIndex = 25;
             // 
             // label8
@@ -425,7 +426,7 @@ namespace Flower_Store
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(961, 39);
+            this.txtQuantity.Location = new System.Drawing.Point(901, 34);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(218, 23);
             this.txtQuantity.TabIndex = 23;
@@ -434,7 +435,7 @@ namespace Flower_Store
             // 
             this.label9.AutoEllipsis = true;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(861, 47);
+            this.label9.Location = new System.Drawing.Point(801, 42);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 15);
             this.label9.TabIndex = 22;
@@ -444,7 +445,7 @@ namespace Flower_Store
             // 
             this.txtProduct.Location = new System.Drawing.Point(490, 87);
             this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(305, 23);
+            this.txtProduct.Size = new System.Drawing.Size(246, 23);
             this.txtProduct.TabIndex = 20;
             // 
             // label6
@@ -477,7 +478,7 @@ namespace Flower_Store
             // 
             this.txtAddress.Location = new System.Drawing.Point(490, 39);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(305, 23);
+            this.txtAddress.Size = new System.Drawing.Size(246, 23);
             this.txtAddress.TabIndex = 13;
             // 
             // label4
@@ -512,7 +513,7 @@ namespace Flower_Store
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1370, 746);
+            this.ClientSize = new System.Drawing.Size(1317, 723);
             this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label7);
