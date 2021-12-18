@@ -37,13 +37,15 @@ namespace Flower_Store
             this.label3 = new System.Windows.Forms.Label();
             this.btnSignin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(57, 118);
+            this.label1.Location = new System.Drawing.Point(63, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 17);
             this.label1.TabIndex = 3;
@@ -53,7 +55,7 @@ namespace Flower_Store
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(57, 158);
+            this.label2.Location = new System.Drawing.Point(63, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 4;
@@ -61,14 +63,14 @@ namespace Flower_Store
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(170, 112);
+            this.txtId.Location = new System.Drawing.Point(176, 226);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(190, 23);
             this.txtId.TabIndex = 5;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(170, 152);
+            this.txtPassword.Location = new System.Drawing.Point(176, 266);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(190, 23);
@@ -92,7 +94,7 @@ namespace Flower_Store
             this.btnSignin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSignin.Image = global::Flower_Store.Properties.Resources.sign_in;
             this.btnSignin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSignin.Location = new System.Drawing.Point(105, 218);
+            this.btnSignin.Location = new System.Drawing.Point(111, 332);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.Size = new System.Drawing.Size(97, 42);
             this.btnSignin.TabIndex = 8;
@@ -107,7 +109,7 @@ namespace Flower_Store
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnExit.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(276, 218);
+            this.btnExit.Location = new System.Drawing.Point(282, 332);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(97, 42);
             this.btnExit.TabIndex = 9;
@@ -115,12 +117,22 @@ namespace Flower_Store
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(162, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 141);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(513, 293);
+            this.ClientSize = new System.Drawing.Size(513, 408);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSignin);
             this.Controls.Add(this.label3);
@@ -132,6 +144,7 @@ namespace Flower_Store
             this.Name = "SignIn";
             this.Text = "SignIn";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +158,7 @@ namespace Flower_Store
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSignin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
