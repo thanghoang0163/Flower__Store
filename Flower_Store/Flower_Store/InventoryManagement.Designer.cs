@@ -45,6 +45,7 @@ namespace Flower_Store
             this.txtIdE = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSoldQuantityE = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,7 +63,7 @@ namespace Flower_Store
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnReload = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -136,7 +137,7 @@ namespace Flower_Store
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(431, 201);
+            this.btnDelete.Location = new System.Drawing.Point(381, 204);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 18;
@@ -149,7 +150,7 @@ namespace Flower_Store
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(283, 201);
+            this.btnUpdate.Location = new System.Drawing.Point(233, 204);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(99, 38);
             this.btnUpdate.TabIndex = 17;
@@ -169,7 +170,7 @@ namespace Flower_Store
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(145, 201);
+            this.btnAdd.Location = new System.Drawing.Point(95, 204);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(99, 38);
             this.btnAdd.TabIndex = 14;
@@ -207,6 +208,7 @@ namespace Flower_Store
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnReload);
             this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label11);
@@ -231,6 +233,19 @@ namespace Flower_Store
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flower";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(535, 204);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(95, 38);
+            this.btnClose.TabIndex = 44;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -381,18 +396,18 @@ namespace Flower_Store
             this.Column6.Name = "Column6";
             this.Column6.Width = 150;
             // 
-            // btnClose
+            // btnReload
             // 
-            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(585, 201);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(95, 38);
-            this.btnClose.TabIndex = 44;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(691, 204);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(96, 35);
+            this.btnReload.TabIndex = 45;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
             // 
             // InventoryManagement
             // 
@@ -451,5 +466,6 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnReload;
     }
 }

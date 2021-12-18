@@ -88,6 +88,19 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnReload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAMUAAADFAR3NuqgAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABV0lEQVQ4T6VTsUrEQBANKujH2AiKhZuY6sAPOFBBQQRtLPyEfIOVwu1uodV1bnK219p6HFdZXXuI
+        J1cf67xkEjZ7Cx5YvGzm5b3Zzc5MZK39F4JkOsy2ktfeXmLUrcjVVVr0dqMs2whpV4i40KdxrmYE62Ga
+        5LLj61sBiZRjGFexfqH1k7nl0UDuu57mJcn1OYsWIpeXLREdPy7kfWLktcuX3/A4eXvYJuMXEvhmH2Kg
+        Dkn3jhVxSeJY1e7ywxX7YPO80qo54upDoW5A0q0/+SYXpJmwucYE5MgjRyEz0O33N2Ojnll3hziifxYU
+        LJjEBYqQuQZpylMcG32AuCQ5yfgvszD6gjf6Tod6B9yKCKVCyfzO4zL/IIEw6qzmGwHA1VjyLtQ8ZROh
+        udBU4Cxd+KPraSUA0K4knNYGBzNR6K6vbwUNScfHAGGQMFAYLAxYUBsi14eNfgGCcKIdBE1jagAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAPJ5AADyeQAAAAAAAAAA

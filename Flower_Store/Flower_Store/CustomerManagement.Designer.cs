@@ -80,6 +80,7 @@ namespace Flower_Store
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnReload = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -262,6 +263,7 @@ namespace Flower_Store
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnReload);
             this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.radioButton2);
             this.groupBox3.Controls.Add(this.radioButton1);
@@ -568,12 +570,25 @@ namespace Flower_Store
             this.label5.TabIndex = 10;
             this.label5.Text = "ID:";
             // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(1100, 223);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(96, 35);
+            this.btnReload.TabIndex = 45;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
+            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1455, 1048);
             this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label7);
@@ -643,5 +658,6 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnReload;
     }
 }

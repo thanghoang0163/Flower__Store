@@ -31,6 +31,11 @@ namespace Flower_Store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceManagement));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbProduct = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpInvoice = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -38,6 +43,12 @@ namespace Flower_Store
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dgvInvoice = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtUnitprice = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -51,23 +62,14 @@ namespace Flower_Store
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtpInvoice = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbProduct = new System.Windows.Forms.ComboBox();
+            this.btnReload = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnReload);
             this.groupBox2.Controls.Add(this.cbProduct);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label7);
@@ -97,13 +99,54 @@ namespace Flower_Store
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Information of Product";
             // 
+            // cbProduct
+            // 
+            this.cbProduct.FormattingEnabled = true;
+            this.cbProduct.Location = new System.Drawing.Point(90, 102);
+            this.cbProduct.Name = "cbProduct";
+            this.cbProduct.Size = new System.Drawing.Size(161, 23);
+            this.cbProduct.TabIndex = 47;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(479, 163);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(200, 23);
+            this.textBox5.TabIndex = 46;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(403, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 15);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Customer:";
+            // 
+            // dtpInvoice
+            // 
+            this.dtpInvoice.CustomFormat = "MM/dd/yyyy   hh:mm:ss tt";
+            this.dtpInvoice.Location = new System.Drawing.Point(141, 163);
+            this.dtpInvoice.Name = "dtpInvoice";
+            this.dtpInvoice.Size = new System.Drawing.Size(200, 23);
+            this.dtpInvoice.TabIndex = 44;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(54, 171);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 15);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Invoice Date:";
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.Control;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(565, 502);
+            this.btnClose.Location = new System.Drawing.Point(500, 509);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(88, 32);
             this.btnClose.TabIndex = 42;
@@ -116,7 +159,7 @@ namespace Flower_Store
             this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExport.Image = global::Flower_Store.Properties.Resources.export;
             this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(410, 502);
+            this.btnExport.Location = new System.Drawing.Point(345, 509);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(97, 32);
             this.btnExport.TabIndex = 41;
@@ -129,7 +172,7 @@ namespace Flower_Store
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(254, 502);
+            this.btnDelete.Location = new System.Drawing.Point(189, 509);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(97, 32);
             this.btnDelete.TabIndex = 40;
@@ -142,7 +185,7 @@ namespace Flower_Store
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(111, 502);
+            this.btnAdd.Location = new System.Drawing.Point(46, 509);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(97, 32);
             this.btnAdd.TabIndex = 30;
@@ -184,6 +227,41 @@ namespace Flower_Store
             this.dgvInvoice.RowTemplate.Height = 25;
             this.dgvInvoice.Size = new System.Drawing.Size(793, 225);
             this.dgvInvoice.TabIndex = 26;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Customer";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Product";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Quantity";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Unit Price";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Total";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 150;
             // 
             // txtTotal
             // 
@@ -302,81 +380,18 @@ namespace Flower_Store
             this.button6.Text = "Find";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // Column1
+            // btnReload
             // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Customer";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Product";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Quantity";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Unit Price";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Total";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(479, 163);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 23);
-            this.textBox5.TabIndex = 46;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(403, 171);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 15);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Customer:";
-            // 
-            // dtpInvoice
-            // 
-            this.dtpInvoice.CustomFormat = "MM/dd/yyyy   hh:mm:ss tt";
-            this.dtpInvoice.Location = new System.Drawing.Point(141, 163);
-            this.dtpInvoice.Name = "dtpInvoice";
-            this.dtpInvoice.Size = new System.Drawing.Size(200, 23);
-            this.dtpInvoice.TabIndex = 44;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 15);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Invoice Date:";
-            // 
-            // cbProduct
-            // 
-            this.cbProduct.FormattingEnabled = true;
-            this.cbProduct.Location = new System.Drawing.Point(90, 102);
-            this.cbProduct.Name = "cbProduct";
-            this.cbProduct.Size = new System.Drawing.Size(161, 23);
-            this.cbProduct.TabIndex = 47;
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(648, 506);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(96, 35);
+            this.btnReload.TabIndex = 48;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
             // 
             // InvoiceManagement
             // 
@@ -433,5 +448,6 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.ComboBox cbProduct;
+        private System.Windows.Forms.Button btnReload;
     }
 }
