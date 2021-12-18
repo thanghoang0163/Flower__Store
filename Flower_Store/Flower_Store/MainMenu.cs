@@ -48,5 +48,11 @@ namespace Flower_Store
             InventoryManagement inventory = new InventoryManagement();
             inventory.Show();
         }
+
+        private void ReportMenu_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+        }
     }
 }

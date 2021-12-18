@@ -137,6 +137,7 @@ namespace Flower_Store
             this.ReportMenu.Name = "ReportMenu";
             this.ReportMenu.Size = new System.Drawing.Size(180, 22);
             this.ReportMenu.Text = "Report";
+            this.ReportMenu.Click += new System.EventHandler(this.ReportMenu_Click);
             // 
             // HelpMenu
             // 
