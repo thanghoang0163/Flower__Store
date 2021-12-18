@@ -45,6 +45,7 @@ namespace Flower_Store
             this.txtIdE = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnReload = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSoldQuantityE = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@ namespace Flower_Store
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnReload = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -227,12 +227,25 @@ namespace Flower_Store
             this.groupBox3.Controls.Add(this.txtIdE);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(53, 731);
+            this.groupBox3.Location = new System.Drawing.Point(54, 561);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(917, 272);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flower";
+            // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(691, 204);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(96, 35);
+            this.btnReload.TabIndex = 45;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
             // 
             // btnClose
             // 
@@ -272,9 +285,9 @@ namespace Flower_Store
             this.groupBox1.Controls.Add(this.txtIdF);
             this.groupBox1.Controls.Add(this.id);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(53, 121);
+            this.groupBox1.Location = new System.Drawing.Point(54, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(917, 188);
+            this.groupBox1.Size = new System.Drawing.Size(917, 108);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Find Flower";
@@ -282,7 +295,7 @@ namespace Flower_Store
             // cbProduct
             // 
             this.cbProduct.FormattingEnabled = true;
-            this.cbProduct.Location = new System.Drawing.Point(493, 47);
+            this.cbProduct.Location = new System.Drawing.Point(374, 48);
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(187, 23);
             this.cbProduct.TabIndex = 15;
@@ -293,7 +306,7 @@ namespace Flower_Store
             this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(339, 112);
+            this.btnFind.Location = new System.Drawing.Point(622, 39);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
             this.btnFind.TabIndex = 14;
@@ -304,7 +317,7 @@ namespace Flower_Store
             // 
             this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(424, 55);
+            this.label1.Location = new System.Drawing.Point(305, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 12;
@@ -312,7 +325,7 @@ namespace Flower_Store
             // 
             // txtIdF
             // 
-            this.txtIdF.Location = new System.Drawing.Point(245, 47);
+            this.txtIdF.Location = new System.Drawing.Point(126, 48);
             this.txtIdF.Name = "txtIdF";
             this.txtIdF.Size = new System.Drawing.Size(122, 23);
             this.txtIdF.TabIndex = 11;
@@ -321,7 +334,7 @@ namespace Flower_Store
             // 
             this.id.AutoEllipsis = true;
             this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(187, 55);
+            this.id.Location = new System.Drawing.Point(68, 56);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(23, 15);
             this.id.TabIndex = 10;
@@ -349,7 +362,7 @@ namespace Flower_Store
             this.Column8,
             this.Column7,
             this.Column6});
-            this.dgvInventory.Location = new System.Drawing.Point(53, 362);
+            this.dgvInventory.Location = new System.Drawing.Point(54, 227);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowTemplate.Height = 25;
             this.dgvInventory.Size = new System.Drawing.Size(917, 310);
@@ -396,25 +409,12 @@ namespace Flower_Store
             this.Column6.Name = "Column6";
             this.Column6.Width = 150;
             // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
-            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(691, 204);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(96, 35);
-            this.btnReload.TabIndex = 45;
-            this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = false;
-            // 
             // InventoryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1068, 1061);
+            this.ClientSize = new System.Drawing.Size(1068, 843);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

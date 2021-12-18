@@ -31,6 +31,7 @@ namespace Flower_Store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceManagement));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnReload = new System.Windows.Forms.Button();
             this.cbProduct = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@ namespace Flower_Store
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.btnReload = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,19 @@ namespace Flower_Store
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Information of Product";
+            // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(648, 506);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(96, 35);
+            this.btnReload.TabIndex = 48;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
             // 
             // cbProduct
             // 
@@ -351,7 +364,7 @@ namespace Flower_Store
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(129, 730);
+            this.textBox13.Location = new System.Drawing.Point(133, 709);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(200, 23);
             this.textBox13.TabIndex = 28;
@@ -360,7 +373,7 @@ namespace Flower_Store
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(42, 738);
+            this.label17.Location = new System.Drawing.Point(46, 717);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(67, 15);
             this.label17.TabIndex = 27;
@@ -373,32 +386,19 @@ namespace Flower_Store
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.Image = global::Flower_Store.Properties.Resources.search;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(370, 724);
+            this.button6.Location = new System.Drawing.Point(374, 703);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(97, 32);
             this.button6.TabIndex = 29;
             this.button6.Text = "Find";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
-            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(648, 506);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(96, 35);
-            this.btnReload.TabIndex = 48;
-            this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = false;
-            // 
             // InvoiceManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(897, 789);
+            this.ClientSize = new System.Drawing.Size(897, 761);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label17);

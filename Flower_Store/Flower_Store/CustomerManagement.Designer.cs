@@ -30,14 +30,7 @@ namespace Flower_Store
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerManagement));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPhoneF = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
-            this.txtCustomerF = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIdF = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +45,7 @@ namespace Flower_Store
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnReload = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -80,45 +74,17 @@ namespace Flower_Store
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnReload = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.id = new System.Windows.Forms.Label();
+            this.txtIdF = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCustomerF = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPhoneF = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtPhoneF);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnFind);
-            this.groupBox1.Controls.Add(this.txtCustomerF);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtIdF);
-            this.groupBox1.Controls.Add(this.id);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(49, 101);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1325, 222);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Find Customer";
-            // 
-            // txtPhoneF
-            // 
-            this.txtPhoneF.Location = new System.Drawing.Point(462, 98);
-            this.txtPhoneF.Name = "txtPhoneF";
-            this.txtPhoneF.Size = new System.Drawing.Size(122, 23);
-            this.txtPhoneF.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoEllipsis = true;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 15);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Phone Number:";
             // 
             // btnFind
             // 
@@ -126,46 +92,12 @@ namespace Flower_Store
             this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(601, 161);
+            this.btnFind.Location = new System.Drawing.Point(983, 36);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
             this.btnFind.TabIndex = 14;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
-            // 
-            // txtCustomerF
-            // 
-            this.txtCustomerF.Location = new System.Drawing.Point(711, 50);
-            this.txtCustomerF.Name = "txtCustomerF";
-            this.txtCustomerF.Size = new System.Drawing.Size(279, 23);
-            this.txtCustomerF.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(641, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Customer:";
-            // 
-            // txtIdF
-            // 
-            this.txtIdF.Location = new System.Drawing.Point(462, 50);
-            this.txtIdF.Name = "txtIdF";
-            this.txtIdF.Size = new System.Drawing.Size(122, 23);
-            this.txtIdF.TabIndex = 11;
-            // 
-            // id
-            // 
-            this.id.AutoEllipsis = true;
-            this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(362, 58);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(23, 15);
-            this.id.TabIndex = 10;
-            this.id.Text = "ID:";
             // 
             // label7
             // 
@@ -193,7 +125,7 @@ namespace Flower_Store
             this.Column8,
             this.Column10,
             this.Column11});
-            this.dgvCustomer.Location = new System.Drawing.Point(49, 367);
+            this.dgvCustomer.Location = new System.Drawing.Point(49, 225);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowTemplate.Height = 25;
             this.dgvCustomer.Size = new System.Drawing.Size(1325, 310);
@@ -293,12 +225,25 @@ namespace Flower_Store
             this.groupBox3.Controls.Add(this.txtIdE);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(49, 718);
+            this.groupBox3.Location = new System.Drawing.Point(49, 562);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1325, 277);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Customer ";
+            // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReload.Location = new System.Drawing.Point(1100, 223);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(96, 35);
+            this.btnReload.TabIndex = 45;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
             // 
             // btnClose
             // 
@@ -570,25 +515,80 @@ namespace Flower_Store
             this.label5.TabIndex = 10;
             this.label5.Text = "ID:";
             // 
-            // btnReload
+            // id
             // 
-            this.btnReload.BackColor = System.Drawing.SystemColors.Control;
-            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(1100, 223);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(96, 35);
-            this.btnReload.TabIndex = 45;
-            this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = false;
+            this.id.AutoEllipsis = true;
+            this.id.AutoSize = true;
+            this.id.Location = new System.Drawing.Point(104, 53);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(23, 15);
+            this.id.TabIndex = 10;
+            this.id.Text = "ID:";
+            // 
+            // txtIdF
+            // 
+            this.txtIdF.Location = new System.Drawing.Point(151, 45);
+            this.txtIdF.Name = "txtIdF";
+            this.txtIdF.Size = new System.Drawing.Size(122, 23);
+            this.txtIdF.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoEllipsis = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(326, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Customer:";
+            // 
+            // txtCustomerF
+            // 
+            this.txtCustomerF.Location = new System.Drawing.Point(396, 45);
+            this.txtCustomerF.Name = "txtCustomerF";
+            this.txtCustomerF.Size = new System.Drawing.Size(192, 23);
+            this.txtCustomerF.TabIndex = 13;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtPhoneF);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnFind);
+            this.groupBox1.Controls.Add(this.txtCustomerF);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtIdF);
+            this.groupBox1.Controls.Add(this.id);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(49, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1325, 102);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Find Customer";
+            // 
+            // label2
+            // 
+            this.label2.AutoEllipsis = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(648, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 15);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Phone Number:";
+            // 
+            // txtPhoneF
+            // 
+            this.txtPhoneF.Location = new System.Drawing.Point(748, 45);
+            this.txtPhoneF.Name = "txtPhoneF";
+            this.txtPhoneF.Size = new System.Drawing.Size(122, 23);
+            this.txtPhoneF.TabIndex = 16;
             // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1455, 1048);
+            this.ClientSize = new System.Drawing.Size(1455, 860);
             this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label7);
@@ -597,25 +597,18 @@ namespace Flower_Store
             this.Name = "CustomerManagement";
             this.Text = "CustomerManagement";
             this.Load += new System.EventHandler(this.CustomerManagement_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.TextBox txtCustomerF;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdF;
-        private System.Windows.Forms.Label id;
-        private System.Windows.Forms.TextBox txtPhoneF;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvCustomer;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -659,5 +652,12 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Label id;
+        private System.Windows.Forms.TextBox txtIdF;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCustomerF;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtPhoneF;
+        private System.Windows.Forms.Label label2;
     }
 }
