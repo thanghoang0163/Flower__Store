@@ -67,5 +67,4 @@ C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug
 C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.csproj.CopyComplete
-C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.Report.resources
 C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.csproj.AssemblyReference.cache

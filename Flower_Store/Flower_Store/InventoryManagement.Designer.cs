@@ -309,7 +309,7 @@ namespace Flower_Store
             this.dgvInventory.Location = new System.Drawing.Point(54, 394);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowTemplate.Height = 25;
-            this.dgvInventory.Size = new System.Drawing.Size(917, 204);
+            this.dgvInventory.Size = new System.Drawing.Size(917, 237);
             this.dgvInventory.TabIndex = 0;
             // 
             // Column1

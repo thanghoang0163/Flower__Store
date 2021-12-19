@@ -51,8 +51,7 @@ namespace Flower_Store
 
         private void ReportMenu_Click(object sender, EventArgs e)
         {
-            Report report = new Report();
-            report.Show();
+            
         }
     }
 }

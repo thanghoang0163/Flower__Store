@@ -99,10 +99,10 @@ namespace Flower_Store
             this.Column8,
             this.Column10,
             this.Column11});
-            this.dgvSupplier.Location = new System.Drawing.Point(71, 426);
+            this.dgvSupplier.Location = new System.Drawing.Point(56, 427);
             this.dgvSupplier.Name = "dgvSupplier";
             this.dgvSupplier.RowTemplate.Height = 25;
-            this.dgvSupplier.Size = new System.Drawing.Size(1325, 310);
+            this.dgvSupplier.Size = new System.Drawing.Size(1267, 310);
             this.dgvSupplier.TabIndex = 23;
             // 
             // Column1
@@ -193,9 +193,9 @@ namespace Flower_Store
             this.groupBox3.Controls.Add(this.txtId);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(71, 107);
+            this.groupBox3.Location = new System.Drawing.Point(56, 114);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1325, 296);
+            this.groupBox3.Size = new System.Drawing.Size(1267, 296);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Supplier";
@@ -468,7 +468,7 @@ namespace Flower_Store
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(1469, 759);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvSupplier);
             this.Controls.Add(this.groupBox3);

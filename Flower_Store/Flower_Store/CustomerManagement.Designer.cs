@@ -74,6 +74,8 @@ namespace Flower_Store
             this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +109,7 @@ namespace Flower_Store
             this.dgvCustomer.Location = new System.Drawing.Point(49, 473);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowTemplate.Height = 25;
-            this.dgvCustomer.Size = new System.Drawing.Size(1189, 216);
+            this.dgvCustomer.Size = new System.Drawing.Size(1189, 238);
             this.dgvCustomer.TabIndex = 24;
             // 
             // Column1
@@ -174,6 +176,7 @@ namespace Flower_Store
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnExport);
             this.groupBox3.Controls.Add(this.btnReload);
             this.groupBox3.Controls.Add(this.btnFind);
             this.groupBox3.Controls.Add(this.btnClose);
@@ -218,7 +221,7 @@ namespace Flower_Store
             this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(748, 267);
+            this.btnReload.Location = new System.Drawing.Point(668, 275);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(101, 38);
             this.btnReload.TabIndex = 51;
@@ -231,7 +234,7 @@ namespace Flower_Store
             this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(596, 267);
+            this.btnFind.Location = new System.Drawing.Point(521, 275);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
             this.btnFind.TabIndex = 46;
@@ -244,7 +247,7 @@ namespace Flower_Store
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(901, 267);
+            this.btnClose.Location = new System.Drawing.Point(970, 275);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(95, 38);
             this.btnClose.TabIndex = 50;
@@ -257,7 +260,7 @@ namespace Flower_Store
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(449, 267);
+            this.btnDelete.Location = new System.Drawing.Point(374, 275);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 49;
@@ -270,7 +273,7 @@ namespace Flower_Store
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(301, 267);
+            this.btnUpdate.Location = new System.Drawing.Point(226, 275);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(99, 38);
             this.btnUpdate.TabIndex = 48;
@@ -283,7 +286,7 @@ namespace Flower_Store
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(163, 267);
+            this.btnAdd.Location = new System.Drawing.Point(88, 275);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(99, 38);
             this.btnAdd.TabIndex = 47;
@@ -508,6 +511,19 @@ namespace Flower_Store
             this.label5.TabIndex = 10;
             this.label5.Text = "ID:";
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(820, 275);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(101, 38);
+            this.btnExport.TabIndex = 52;
+            this.btnExport.Text = "Export ";
+            this.btnExport.UseVisualStyleBackColor = false;
+            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -574,5 +590,7 @@ namespace Flower_Store
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }

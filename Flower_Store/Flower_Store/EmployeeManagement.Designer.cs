@@ -92,7 +92,7 @@ namespace Flower_Store
             this.dgvEmployee.Location = new System.Drawing.Point(51, 408);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowTemplate.Height = 25;
-            this.dgvEmployee.Size = new System.Drawing.Size(664, 189);
+            this.dgvEmployee.Size = new System.Drawing.Size(664, 233);
             this.dgvEmployee.TabIndex = 0;
             // 
             // Column1

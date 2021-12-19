@@ -39,9 +39,6 @@ namespace Flower_Store
             this.EmployeeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.CustomerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.InventoryMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExportMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.InvoiceMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.ReportMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
@@ -60,7 +57,6 @@ namespace Flower_Store
             this.EmployeeMenu,
             this.CustomerMenu,
             this.InventoryMenu,
-            this.ExportMenu,
             this.HelpMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -116,29 +112,6 @@ namespace Flower_Store
             this.InventoryMenu.Text = "Inventory Management";
             this.InventoryMenu.Click += new System.EventHandler(this.InventoryMenu_Click);
             // 
-            // ExportMenu
-            // 
-            this.ExportMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.InvoiceMenu,
-            this.ReportMenu});
-            this.ExportMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ExportMenu.Name = "ExportMenu";
-            this.ExportMenu.Size = new System.Drawing.Size(53, 20);
-            this.ExportMenu.Text = "Export";
-            // 
-            // InvoiceMenu
-            // 
-            this.InvoiceMenu.Name = "InvoiceMenu";
-            this.InvoiceMenu.Size = new System.Drawing.Size(180, 22);
-            this.InvoiceMenu.Text = "Invoice";
-            // 
-            // ReportMenu
-            // 
-            this.ReportMenu.Name = "ReportMenu";
-            this.ReportMenu.Size = new System.Drawing.Size(180, 22);
-            this.ReportMenu.Text = "Report";
-            this.ReportMenu.Click += new System.EventHandler(this.ReportMenu_Click);
-            // 
             // HelpMenu
             // 
             this.HelpMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -182,9 +155,6 @@ namespace Flower_Store
         private System.Windows.Forms.ToolStripMenuItem CustomerMenu;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ToolStripMenuItem InventoryMenu;
-        private System.Windows.Forms.ToolStripMenuItem ExportMenu;
         private System.Windows.Forms.ToolStripMenuItem HelpMenu;
-        private System.Windows.Forms.ToolStripMenuItem InvoiceMenu;
-        private System.Windows.Forms.ToolStripMenuItem ReportMenu;
     }
 }

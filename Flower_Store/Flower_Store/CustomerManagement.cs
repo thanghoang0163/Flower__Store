@@ -22,7 +22,7 @@ namespace Flower_Store
 
         private void dtpCustomer_ValueChanged(object sender, EventArgs e)
         {
-            dtpCustomer.CustomFormat = "ddd, dd/MM/yyyy  hh:mm";
+            dtpCustomer.CustomFormat = "ddd, dd/MMM/yyyy  hh:mm";
         }
     }
 }
