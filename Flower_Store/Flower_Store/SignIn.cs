@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace Flower_Store
 {
     public partial class SignIn : Form
@@ -27,6 +28,8 @@ namespace Flower_Store
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            txtId.Text = "admin";
+            txtPassword.Text = "123";
             txtId.Focus();
         }
 
@@ -48,27 +51,34 @@ namespace Flower_Store
                 if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
-                    string id = txtId.Text;
+                    string username  = txtId.Text;
                     string pass = txtPassword.Text;
-                    string sql = "select * from SIGNIN where IDEMP = '" + id + "' and PASSWORDSI = '" + pass + "'";
+                    string sql = "select * from SIGNIN where USERNAME = '" + username + "' and PASSWORD = '" + pass + "'";
                     command = new SqlCommand(sql, connection);
                     SqlDataReader data = command.ExecuteReader();
                     if(data.Read() == true)
                     {
                         MainMenu mainmenu = new MainMenu();
                         mainmenu.Show();
-                        
+                        connection.Close();
                     }
                     else
                     {
                         MessageBox.Show("The employee is not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        connection.Close();
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                connection.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
