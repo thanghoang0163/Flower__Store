@@ -50,6 +50,7 @@ namespace Flower_Store
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtUnitprice = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -60,9 +61,9 @@ namespace Flower_Store
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.btnIdInvoice = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnFind = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMaximized = new System.Windows.Forms.Button();
             this.btnMinimized = new System.Windows.Forms.Button();
@@ -77,7 +78,7 @@ namespace Flower_Store
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.BackColor = System.Drawing.Color.MistyRose;
+            this.groupBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox2.Controls.Add(this.btnReload);
             this.groupBox2.Controls.Add(this.cbProduct);
             this.groupBox2.Controls.Add(this.textBox5);
@@ -116,7 +117,7 @@ namespace Flower_Store
             this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(645, 484);
+            this.btnReload.Location = new System.Drawing.Point(506, 484);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(96, 35);
             this.btnReload.TabIndex = 48;
@@ -126,7 +127,7 @@ namespace Flower_Store
             // cbProduct
             // 
             this.cbProduct.FormattingEnabled = true;
-            this.cbProduct.Location = new System.Drawing.Point(90, 102);
+            this.cbProduct.Location = new System.Drawing.Point(104, 102);
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(161, 23);
             this.cbProduct.TabIndex = 47;
@@ -150,7 +151,7 @@ namespace Flower_Store
             // dtpInvoice
             // 
             this.dtpInvoice.CustomFormat = "";
-            this.dtpInvoice.Location = new System.Drawing.Point(111, 163);
+            this.dtpInvoice.Location = new System.Drawing.Point(104, 163);
             this.dtpInvoice.Name = "dtpInvoice";
             this.dtpInvoice.Size = new System.Drawing.Size(200, 23);
             this.dtpInvoice.TabIndex = 44;
@@ -159,7 +160,7 @@ namespace Flower_Store
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 171);
+            this.label2.Location = new System.Drawing.Point(14, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 43;
@@ -173,7 +174,7 @@ namespace Flower_Store
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(497, 487);
+            this.btnClose.Location = new System.Drawing.Point(661, 485);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(88, 32);
             this.btnClose.TabIndex = 42;
@@ -257,7 +258,8 @@ namespace Flower_Store
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6});
+            this.Column6,
+            this.Column2});
             this.dgvInvoice.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvInvoice.Location = new System.Drawing.Point(0, 234);
             this.dgvInvoice.Name = "dgvInvoice";
@@ -304,6 +306,12 @@ namespace Flower_Store
             this.Column6.HeaderText = "Total";
             this.Column6.Name = "Column6";
             this.Column6.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Invoice Date";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
             // 
             // txtTotal
             // 
@@ -388,18 +396,18 @@ namespace Flower_Store
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(374, 48);
+            this.label3.Location = new System.Drawing.Point(387, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 32);
             this.label3.TabIndex = 25;
             this.label3.Text = "BILL OF SALE";
             // 
-            // textBox13
+            // btnIdInvoice
             // 
-            this.textBox13.Location = new System.Drawing.Point(133, 683);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(200, 23);
-            this.textBox13.TabIndex = 28;
+            this.btnIdInvoice.Location = new System.Drawing.Point(133, 683);
+            this.btnIdInvoice.Name = "btnIdInvoice";
+            this.btnIdInvoice.Size = new System.Drawing.Size(200, 23);
+            this.btnIdInvoice.TabIndex = 28;
             // 
             // label17
             // 
@@ -411,21 +419,21 @@ namespace Flower_Store
             this.label17.TabIndex = 27;
             this.label17.Text = "ID Invoice:";
             // 
-            // button6
+            // btnFind
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Image = global::Flower_Store.Properties.Resources.search;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(374, 677);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(97, 32);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "Find";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.FlatAppearance.BorderSize = 0;
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFind.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
+            this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFind.Location = new System.Drawing.Point(374, 677);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(97, 32);
+            this.btnFind.TabIndex = 29;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
@@ -471,7 +479,7 @@ namespace Flower_Store
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(305, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(318, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 55);
             this.pictureBox1.TabIndex = 36;
@@ -488,8 +496,8 @@ namespace Flower_Store
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMaximized);
             this.Controls.Add(this.btnMinimized);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.btnIdInvoice);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
@@ -520,9 +528,9 @@ namespace Flower_Store
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox btnIdInvoice;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExport;
@@ -533,15 +541,16 @@ namespace Flower_Store
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbProduct;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMaximized;
+        private System.Windows.Forms.Button btnMinimized;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnMaximized;
-        private System.Windows.Forms.Button btnMinimized;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

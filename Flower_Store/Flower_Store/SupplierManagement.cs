@@ -26,6 +26,12 @@ namespace Flower_Store
             da.Fill(dt);
             connection.Close();
             dgvSupplier.DataSource = dt;
+            dgvSupplier.Columns["IDPROD"].Visible = false;
+            for (int i = 0; i < dgvSupplier.Rows.Count - 1; i++)
+            {
+                dgvSupplier.Rows[i].Cells["STT"].Value = (i + 1);
+
+            }
         }
         public SupplierManagement()
         {
@@ -52,44 +58,68 @@ namespace Flower_Store
         {
             this.Close();
         }
-
+        private int getInventoryId()
+        {
+            SqlDataReader dataReader;
+            int id = 0;
+            string getIdprod = "select IDPROD from INVENTORY where PRODUCT = '" + txtProduct.Text + "'";
+            SqlCommand com = new SqlCommand(getIdprod , connection);
+            dataReader = com.ExecuteReader();
+            if (dataReader.Read() == true)
+            {
+                id = 1;
+                while (dataReader.Read())
+                {
+                    id = dataReader.GetInt32(0);
+                }
+            }
+            else
+            {
+                id = 0 ;
+            }    
+            dataReader.Close();
+            return id;
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtAddress.Text != "" && txtPhone.Text != "" && txtProduct.Text != "")
+                if (txtAddress.Text != "" && txtPhone.Text != "" && txtProduct.Text != "" && txtQuantity.Text != "" && txtSupplier.Text != "")
                 {
                     connection.Open();
-                    string sql = "insert into SUPPLIER (NAMESUPP, PHONE, ADDRESSSUPP, IDPROD, PRODUCT, QUANTITY, UNITPRICE, TOTALPRICE, SUPPLYDATE) values('" +
-    txtSupplier.Text + "', '" + txtPhone.Text + "',' " + txtAddress.Text + "', '" + txtProduct.Text + "',5, '" + txtProduct.Text + "', '" + txtQuantity.Text + "', '" + txtUnitprice.Text + "', '" + txtTotalprice.Text + "')";
-                    SqlCommand com = new SqlCommand(sql, connection);
-                    int result = (int)com.ExecuteNonQuery();
-                    if (result > 0)
+                    if (getInventoryId() == 0)
                     {
-                        MessageBox.Show("Supplier added");
-                        connection.Close();
-                        connectDb();
-                        clearData();
+                        MessageBox.Show("The product is not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-
-                        MessageBox.Show("Add failed");
-                    connection.Close();
-
-
+                    {
+                        string sql = "insert into SUPPLIER (NAMESUPP, PHONE, ADDRESSSUPP, IDPROD, PRODUCT, QUANTITY, UNITPRICE, TOTALPRICE, SUPPLYDATE) values('" +
+ txtSupplier.Text + "', '" + txtPhone.Text + "',' " + txtAddress.Text + "','" + getInventoryId() + "','" + txtProduct.Text + "', '" + txtQuantity.Text + "', '" + txtQuantity.Text + "', '" + txtUnitprice.Text + "', '" + dtpSupplier.Text + "')";
+                        SqlCommand com = new SqlCommand(sql, connection);
+                        int result = (int)com.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Supplier added!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            connection.Close();
+                            connectDb();
+                            clearData();
+                        }
+                        else
+                            MessageBox.Show("Add failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please fill out the information completely!");
-                    connection.Close();
+                    MessageBox.Show("Please fill out the information completely!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
+                connection.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Connection error" + ex.Message);
+                MessageBox.Show("Connection error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
             }
+         
         }
 
         private void SupplierManagement_Load(object sender, EventArgs e)
@@ -104,38 +134,41 @@ namespace Flower_Store
                 if (txtAddress.Text != "" && txtPhone.Text != "" && txtProduct.Text != "" && txtQuantity.Text != "" && txtSupplier.Text != "" && txtTotalprice.Text != "")
                 {
                     connection.Open();
-                    string sql = "update SUPPLIER set NAMESUPP ='" + txtSupplier.Text + "', PHONE = '" + txtPhone.Text + "', ADDRESSSUPP='" + txtAddress.Text + "' , IDPROD ='  5' , PRODUCT = '" + txtProduct.Text + "', QUANTITY = '" + txtQuantity.Text + "', UNITPRICE = '" + txtUnitprice.Text + "', TOTALPRICE= '" + txtTotalprice.Text + "', SUPPLYDATE = '" + dtpSupplier.Text + "'  where idsupp = '" + txtId.Text + "'";
-                    SqlCommand com = new SqlCommand(sql, connection);
-                    int result = (int)com.ExecuteNonQuery();
-                    if (result > 0)
+                    if (getInventoryId() == 0)
                     {
-                        MessageBox.Show("Update success!");
-                        connection.Close();
-                        connectDb();
-                        clearData();
+                        MessageBox.Show("The product is not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        MessageBox.Show("Update failed");
+                    {
+                        string sql = "update SUPPLIER set NAMESUPP ='" + txtSupplier.Text + "', PHONE = '" + txtPhone.Text + "', ADDRESSSUPP='" + txtAddress.Text + "' , IDPROD ='  5' , PRODUCT = '" + txtProduct.Text + "', QUANTITY = '" + txtQuantity.Text + "', UNITPRICE = '" + txtUnitprice.Text + "', TOTALPRICE= '" + txtTotalprice.Text + "', SUPPLYDATE = '" + dtpSupplier.Text + "'  where idsupp = '" + txtId.Text + "'";
+                        SqlCommand com = new SqlCommand(sql, connection);
+                        int result = (int)com.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Update success!");
+                            connection.Close();
+                            connectDb();
+                            clearData();
+                        }
+                        else
+                            MessageBox.Show("Update failed");
+                    }
                     connection.Close();
                 }
                 else
                 {
                     MessageBox.Show("Please fill out the information completely!");
-                    connection.Close();
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Connection error" + ex.Message);
-                connection.Close();
-
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult message = MessageBox.Show("Are you Sure?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult message = MessageBox.Show("Are you Sure?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (message == DialogResult.OK)
             {
                 connection.Open();
@@ -189,6 +222,18 @@ namespace Flower_Store
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void dgvSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dgvSupplier.CurrentRow.Cells[1].Value.ToString();
+            txtSupplier.Text = dgvSupplier.CurrentRow.Cells[2].Value.ToString();
+            txtProduct.Text = dgvSupplier.CurrentRow.Cells[5].Value.ToString();
+            txtAddress.Text = dgvSupplier.CurrentRow.Cells[4].Value.ToString();
+            txtQuantity.Text = dgvSupplier.CurrentRow.Cells[6].Value.ToString();
+            txtPhone.Text = dgvSupplier.CurrentRow.Cells[3].Value.ToString();
+            txtUnitprice.Text = dgvSupplier.CurrentRow.Cells[7].Value.ToString();
+            txtTotalprice.Text = dgvSupplier.CurrentRow.Cells[8].Value.ToString();
         }
     }
 }

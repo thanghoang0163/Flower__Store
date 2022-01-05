@@ -92,3 +92,4 @@ C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug
 C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Report.pdb
 C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\Report.exe.config
 C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\bin\Debug\netcoreapp3.1\EntityFramework.xml
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\Flower_Store\obj\Debug\netcoreapp3.1\Flower_Store.OderManagement.resources

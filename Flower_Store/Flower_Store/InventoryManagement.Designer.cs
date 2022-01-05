@@ -52,17 +52,17 @@ namespace Flower_Store
             this.txtSoldQuantity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnMaximized = new System.Windows.Forms.Button();
+            this.btnMinimized = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMaximized = new System.Windows.Forms.Button();
-            this.btnMinimized = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -322,7 +322,7 @@ namespace Flower_Store
             this.dgvInventory.BackgroundColor = System.Drawing.Color.Ivory;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.STT,
             this.Column2,
             this.Column3,
             this.Column5,
@@ -336,53 +336,6 @@ namespace Flower_Store
             this.dgvInventory.Size = new System.Drawing.Size(917, 237);
             this.dgvInventory.TabIndex = 0;
             this.dgvInventory.Click += new System.EventHandler(this.dgvInventory_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "IDPROD";
-            this.Column2.HeaderText = "ID";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "PRODUCT";
-            this.Column3.HeaderText = "Product";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "UNITPRICE";
-            this.Column5.HeaderText = "Unit Price ";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "SOLDQUANTITY";
-            this.Column8.HeaderText = "Sold Quantity";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "REMANININGQUANTITY";
-            this.Column7.HeaderText = "Remaining Quantity";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "TOTALQUANTITY";
-            this.Column6.HeaderText = "Total Quantity";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
             // 
             // btnExit
             // 
@@ -434,6 +387,53 @@ namespace Flower_Store
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "IDPROD";
+            this.Column2.HeaderText = "ID";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "PRODUCT";
+            this.Column3.HeaderText = "Product";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "UNITPRICE";
+            this.Column5.HeaderText = "Unit Price ";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 120;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "SOLDQUANTITY";
+            this.Column8.HeaderText = "Sold Quantity";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "REMANININGQUANTITY";
+            this.Column7.HeaderText = "Remaining Quantity";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "TOTALQUANTITY";
+            this.Column6.HeaderText = "Total Quantity";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 150;
+            // 
             // InventoryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -484,16 +484,16 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnReload;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMaximized;
+        private System.Windows.Forms.Button btnMinimized;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnMaximized;
-        private System.Windows.Forms.Button btnMinimized;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

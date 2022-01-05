@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Runtime.InteropServices;
 
 namespace Flower_Store
 {
@@ -53,7 +53,7 @@ namespace Flower_Store
                     connection.Open();
                     string username  = txtId.Text;
                     string pass = txtPassword.Text;
-                    string sql = "select * from SIGNIN where USERNAME = '" + username + "' and PASSWORD = '" + pass + "'";
+                    string sql = "select * from SIGNIN where USERNAME = '" + username + "' and PASSWORDSI = '" + pass + "'";
                     command = new SqlCommand(sql, connection);
                     SqlDataReader data = command.ExecuteReader();
                     if(data.Read() == true)
@@ -72,13 +72,30 @@ namespace Flower_Store
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                connection.Close();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SignIn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("Enter key pressed");
+            }
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void SignIn_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -27,7 +27,12 @@ namespace Flower_Store
             DataTable dt = new DataTable(); 
             da.Fill(dt);  
             connection.Close();  
-            dgvEmployee.DataSource = dt; 
+            dgvEmployee.DataSource = dt;
+            for (int i = 0; i < dgvEmployee.Rows.Count -1 ; i++)
+            {
+                dgvEmployee.Rows[i].Cells["STT"].Value = (i + 1);
+
+            }
         }
 
         public EmployeeManagement()

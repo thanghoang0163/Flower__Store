@@ -22,16 +22,37 @@ namespace Flower_Store
         {
             connection = new SqlConnection(strCon);
             connection.Open();
-            string sql = "select * from INVENTORY";  // lay het du lieu trong bang sinh vien
-            SqlCommand com = new SqlCommand(sql, connection); //bat dau truy van
+            string sql = "select * from INVENTORY";  
+            SqlCommand com = new SqlCommand(sql, connection); 
             com.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(com); //chuyen du lieu ve
-            DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
-            da.Fill(dt);  // đổ dữ liệu vào kho
-            connection.Close();  // đóng kết nối
-            dgvInventory.DataSource = dt; //đổ dữ liệu vào datagridview
-        }
+            SqlDataAdapter da = new SqlDataAdapter(com); 
+            DataTable dt = new DataTable(); 
+            da.Fill(dt);  
+            connection.Close(); 
+            dgvInventory.DataSource = dt; 
+            for (int i = 0; i < dgvInventory.Rows.Count - 1; i++)
+            {
+                dgvInventory.Rows[i].Cells["STT"].Value = (i + 1);
 
+            }
+        }
+        public bool getInventory(string product)
+        {
+            SqlDataReader dataReader;
+            string getIdprod = "select PRODUCT from INVENTORY where PRODUCT = '" + product + "'";
+            SqlCommand com = new SqlCommand(getIdprod, connection);
+            dataReader = com.ExecuteReader();
+            if (dataReader.Read() == true)
+            {
+                dataReader.Close();
+                return true;
+            }
+            else
+            {
+                dataReader.Close();
+                return false;
+            }
+        }
         private void InventoryManagement_Load(object sender, EventArgs e)
         {
             connectDb();
@@ -52,30 +73,37 @@ namespace Flower_Store
                 if (txtProduct.Text != "" && txtUnitprice.Text != "" && txtRemainingQuantity.Text != "" && txtSoldQuantity.Text != "" )
                 {
                     connection.Open();
-                    string sql = "insert into INVENTORY (PRODUCT, UNITPRICE, SOLDQUANTITY, REMANININGQUANTITY, TOTALQUANTITY) values('" + txtProduct.Text + "', '" + txtUnitprice.Text + "',' " + txtSoldQuantity.Text + "',' " + txtRemainingQuantity.Text + "',' " + txtTotalQuantity.Text + "')";
-                    SqlCommand com = new SqlCommand(sql, connection);
-                    int result = (int)com.ExecuteNonQuery();
-                    if (result > 0)
+                    if (getInventory(txtProduct.Text))
                     {
-                        MessageBox.Show("Inventory added.");
-                        connection.Close();
-                        connectDb();
-                        clearData();
+                        MessageBox.Show("The product is exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        MessageBox.Show("Add failed.");
+                    {
+                   
+                        string sql = "insert into INVENTORY (PRODUCT, UNITPRICE, SOLDQUANTITY, REMANININGQUANTITY, TOTALQUANTITY) values('" + txtProduct.Text + "', '" + txtUnitprice.Text + "',' " + txtSoldQuantity.Text + "',' " + txtRemainingQuantity.Text + "',' " + (Int32.Parse(txtSoldQuantity.Text) + Int32.Parse(txtRemainingQuantity.Text)) + "')";
+                        SqlCommand com = new SqlCommand(sql, connection);
+                        int result = (int)com.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Inventory added.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            connection.Close();
+                            connectDb();
+                            clearData();
+                        }
+                        else
+                            MessageBox.Show("Something wrong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
+                    }
                     connection.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Please fill out the information completely!");
-                    connection.Close();
+                    MessageBox.Show("Please fill out the information completely!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Connection error." + ex.Message);
-                connection.Close();
+                MessageBox.Show("Connection error." + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -86,30 +114,30 @@ namespace Flower_Store
                 if (txtProduct.Text != "" && txtUnitprice.Text != "" && txtRemainingQuantity.Text != "" && txtSoldQuantity.Text != "" )
                 {
                     connection.Open();
-                    string sql = "update INVENTORY set PRODUCT = '" + txtProduct.Text + "' , UNITPRICE = '" + txtUnitprice.Text + "', SOLDQUANTITY = '" + txtSoldQuantity.Text + "', REMANININGQUANTITY = '" + txtSoldQuantity.Text + "', TOTALQUANTITY ='" + txtTotalQuantity.Text + "' where idprod = '" + txtId.Text + "'";
+                    string sql = "update INVENTORY set PRODUCT = '" + txtProduct.Text + "' , UNITPRICE = '" + txtUnitprice.Text + "', SOLDQUANTITY = '" + txtSoldQuantity.Text + "', REMANININGQUANTITY = '" + txtRemainingQuantity.Text + "', TOTALQUANTITY ='" + (Int32.Parse(txtSoldQuantity.Text) + Int32.Parse(txtRemainingQuantity.Text)) + "' where idprod = '" + txtId.Text + "'";
                     SqlCommand com = new SqlCommand(sql, connection);
                     int result = (int)com.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        MessageBox.Show("Update success!");
+                        MessageBox.Show("Update success!.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         connection.Close();
                         connectDb();
                         clearData();
                     }
                     else
-                        MessageBox.Show("Update failed.");
+                        MessageBox.Show("Something wrong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     connection.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Please fill out the information completely!");
+                    MessageBox.Show("Please fill out the information completely!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     connection.Close();
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Connection error." + ex.Message);
+                MessageBox.Show("Connection error." + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
             }
         }
@@ -138,7 +166,7 @@ namespace Flower_Store
                 string sql = "delete from inventory where IDPROD = '" + txtId.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Delete success!");
+                MessageBox.Show("Delete success!.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 connection.Close();
                 connectDb();
                 clearData();

@@ -33,11 +33,6 @@ namespace Flower_Store
             this.label3 = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
@@ -56,6 +51,11 @@ namespace Flower_Store
             this.btnMaximized = new System.Windows.Forms.Button();
             this.btnMinimized = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,7 +93,7 @@ namespace Flower_Store
             this.dgvEmployee.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.STT,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -105,39 +105,6 @@ namespace Flower_Store
             this.dgvEmployee.Size = new System.Drawing.Size(664, 233);
             this.dgvEmployee.TabIndex = 0;
             this.dgvEmployee.Click += new System.EventHandler(this.dgvEmployee_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "IDEMP";
-            this.Column2.HeaderText = "ID";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "NAMEEMP";
-            this.Column3.HeaderText = "Employee";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "PHONE";
-            this.Column4.HeaderText = "Phone Number";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "SALARY";
-            this.Column5.HeaderText = "Salary/Month";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
             // 
             // groupBox3
             // 
@@ -363,6 +330,39 @@ namespace Flower_Store
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "IDEMP";
+            this.Column2.HeaderText = "ID";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NAMEEMP";
+            this.Column3.HeaderText = "Employee";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "PHONE";
+            this.Column4.HeaderText = "Phone Number";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "SALARY";
+            this.Column5.HeaderText = "Salary/Month";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 120;
+            // 
             // EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -417,5 +417,6 @@ namespace Flower_Store
         private System.Windows.Forms.Button btnMaximized;
         private System.Windows.Forms.Button btnMinimized;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
     }
 }

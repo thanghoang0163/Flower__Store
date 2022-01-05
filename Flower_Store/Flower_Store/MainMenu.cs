@@ -21,11 +21,6 @@ namespace Flower_Store
             this.Close();
         }
 
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void SupplierMenu_Click(object sender, EventArgs e)
         {
             SupplierManagement supplier = new SupplierManagement();
@@ -95,6 +90,73 @@ namespace Flower_Store
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnMinimizedd_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximizedd_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximized.BackgroundImage = Properties.Resources.minimize__1_;
+
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnMaximized.BackgroundImage = Properties.Resources.maximize;
+
+            }
+        }
+
+        private void btnExitt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerManagement customer = new CustomerManagement();
+            customer.Show();
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            SupplierManagement supplier = new SupplierManagement();
+            supplier.Show();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            OderManagement order = new OderManagement();
+            order.Show();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            InventoryManagement inventory = new InventoryManagement();
+            inventory.Show();
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            EmployeeManagement employee = new EmployeeManagement();
+            employee.Show();
+        }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            InvoiceManagement invoice = new InvoiceManagement();
+            invoice.Show();
         }
     }
 }
