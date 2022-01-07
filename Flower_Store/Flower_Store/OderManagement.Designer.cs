@@ -41,10 +41,9 @@ namespace Flower_Store
             this.label15 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dtpOrder = new System.Windows.Forms.DateTimePicker();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dgvSupplier = new System.Windows.Forms.DataGridView();
+            this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +55,9 @@ namespace Flower_Store
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnGetProduct = new System.Windows.Forms.Button();
+            this.getCustomer = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtTotalprice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,7 +76,7 @@ namespace Flower_Store
             this.txtIdOrder = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,7 +138,7 @@ namespace Flower_Store
             this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(802, 224);
+            this.btnReload.Location = new System.Drawing.Point(721, 219);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(101, 38);
             this.btnReload.TabIndex = 51;
@@ -162,12 +163,13 @@ namespace Flower_Store
             this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(650, 224);
+            this.btnFind.Location = new System.Drawing.Point(569, 219);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
             this.btnFind.TabIndex = 46;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // btnClose
             // 
@@ -177,7 +179,7 @@ namespace Flower_Store
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(955, 224);
+            this.btnClose.Location = new System.Drawing.Point(874, 219);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(95, 38);
             this.btnClose.TabIndex = 50;
@@ -202,7 +204,7 @@ namespace Flower_Store
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(503, 224);
+            this.btnDelete.Location = new System.Drawing.Point(422, 219);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 49;
@@ -217,30 +219,15 @@ namespace Flower_Store
             this.dtpOrder.Size = new System.Drawing.Size(229, 23);
             this.dtpOrder.TabIndex = 34;
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.LightBlue;
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(355, 224);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(99, 38);
-            this.btnUpdate.TabIndex = 48;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
             // label14
             // 
             this.label14.AutoEllipsis = true;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(861, 152);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 15);
+            this.label14.Size = new System.Drawing.Size(90, 15);
             this.label14.TabIndex = 33;
-            this.label14.Text = "Order Date:";
+            this.label14.Text = "Purchase Date:";
             // 
             // label7
             // 
@@ -253,11 +240,11 @@ namespace Flower_Store
             this.label7.TabIndex = 42;
             this.label7.Text = "ORDER MANAGEMENT";
             // 
-            // dgvSupplier
+            // dgvOrder
             // 
-            this.dgvSupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.Column2,
             this.Column3,
@@ -268,15 +255,16 @@ namespace Flower_Store
             this.Column8,
             this.Column10,
             this.Column11});
-            this.dgvSupplier.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvSupplier.Location = new System.Drawing.Point(34, 420);
-            this.dgvSupplier.Name = "dgvSupplier";
-            this.dgvSupplier.RowTemplate.Height = 25;
-            this.dgvSupplier.Size = new System.Drawing.Size(1267, 310);
-            this.dgvSupplier.TabIndex = 40;
+            this.dgvOrder.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgvOrder.Location = new System.Drawing.Point(34, 420);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.RowTemplate.Height = 25;
+            this.dgvOrder.Size = new System.Drawing.Size(1267, 310);
+            this.dgvOrder.TabIndex = 40;
             // 
             // STT
             // 
+            this.STT.DataPropertyName = "STT";
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
             this.STT.Width = 50;
@@ -336,7 +324,7 @@ namespace Flower_Store
             // 
             // Column11
             // 
-            this.Column11.DataPropertyName = "ORDERDATE";
+            this.Column11.DataPropertyName = "PURCHASEDATE";
             this.Column11.HeaderText = "Order Date";
             this.Column11.Name = "Column11";
             this.Column11.Width = 200;
@@ -344,6 +332,8 @@ namespace Flower_Store
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox3.Controls.Add(this.btnGetProduct);
+            this.groupBox3.Controls.Add(this.getCustomer);
             this.groupBox3.Controls.Add(this.btnReload);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.btnFind);
@@ -353,7 +343,6 @@ namespace Flower_Store
             this.groupBox3.Controls.Add(this.dtpOrder);
             this.groupBox3.Controls.Add(this.btnUpdate);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.btnAdd);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txtTotalprice);
             this.groupBox3.Controls.Add(this.label10);
@@ -379,20 +368,51 @@ namespace Flower_Store
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Order";
             // 
-            // btnAdd
+            // btnGetProduct
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(217, 224);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(99, 38);
-            this.btnAdd.TabIndex = 47;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnGetProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGetProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGetProduct.FlatAppearance.BorderSize = 0;
+            this.btnGetProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGetProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGetProduct.Location = new System.Drawing.Point(707, 87);
+            this.btnGetProduct.Name = "btnGetProduct";
+            this.btnGetProduct.Size = new System.Drawing.Size(103, 23);
+            this.btnGetProduct.TabIndex = 53;
+            this.btnGetProduct.Text = "Get Product";
+            this.btnGetProduct.UseVisualStyleBackColor = false;
+            this.btnGetProduct.Click += new System.EventHandler(this.btnGetProduct_Click);
+            // 
+            // getCustomer
+            // 
+            this.getCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.getCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.getCustomer.FlatAppearance.BorderSize = 0;
+            this.getCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.getCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.getCustomer.Location = new System.Drawing.Point(707, 39);
+            this.getCustomer.Name = "getCustomer";
+            this.getCustomer.Size = new System.Drawing.Size(103, 23);
+            this.getCustomer.TabIndex = 52;
+            this.getCustomer.Text = "Get Customer";
+            this.getCustomer.UseVisualStyleBackColor = false;
+            this.getCustomer.Click += new System.EventHandler(this.getCustomer_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.LightBlue;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(274, 219);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(99, 38);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label13
             // 
@@ -406,6 +426,7 @@ namespace Flower_Store
             // 
             // txtTotalprice
             // 
+            this.txtTotalprice.Enabled = false;
             this.txtTotalprice.Location = new System.Drawing.Point(961, 92);
             this.txtTotalprice.Name = "txtTotalprice";
             this.txtTotalprice.ReadOnly = true;
@@ -424,8 +445,10 @@ namespace Flower_Store
             // 
             // txtIdProduct
             // 
+            this.txtIdProduct.Enabled = false;
             this.txtIdProduct.Location = new System.Drawing.Point(204, 144);
             this.txtIdProduct.Name = "txtIdProduct";
+            this.txtIdProduct.ReadOnly = true;
             this.txtIdProduct.Size = new System.Drawing.Size(161, 23);
             this.txtIdProduct.TabIndex = 27;
             // 
@@ -441,8 +464,10 @@ namespace Flower_Store
             // 
             // txtUnitprice
             // 
+            this.txtUnitprice.Enabled = false;
             this.txtUnitprice.Location = new System.Drawing.Point(490, 144);
             this.txtUnitprice.Name = "txtUnitprice";
+            this.txtUnitprice.ReadOnly = true;
             this.txtUnitprice.Size = new System.Drawing.Size(259, 23);
             this.txtUnitprice.TabIndex = 25;
             // 
@@ -458,8 +483,10 @@ namespace Flower_Store
             // 
             // txtQuantity
             // 
+            this.txtQuantity.Enabled = false;
             this.txtQuantity.Location = new System.Drawing.Point(961, 39);
             this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.ReadOnly = true;
             this.txtQuantity.Size = new System.Drawing.Size(218, 23);
             this.txtQuantity.TabIndex = 23;
             // 
@@ -475,9 +502,11 @@ namespace Flower_Store
             // 
             // txtProduct
             // 
+            this.txtProduct.Enabled = false;
             this.txtProduct.Location = new System.Drawing.Point(490, 87);
             this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(305, 23);
+            this.txtProduct.ReadOnly = true;
+            this.txtProduct.Size = new System.Drawing.Size(194, 23);
             this.txtProduct.TabIndex = 20;
             // 
             // label6
@@ -492,8 +521,10 @@ namespace Flower_Store
             // 
             // txtIdCustomer
             // 
+            this.txtIdCustomer.Enabled = false;
             this.txtIdCustomer.Location = new System.Drawing.Point(204, 87);
             this.txtIdCustomer.Name = "txtIdCustomer";
+            this.txtIdCustomer.ReadOnly = true;
             this.txtIdCustomer.Size = new System.Drawing.Size(161, 23);
             this.txtIdCustomer.TabIndex = 16;
             // 
@@ -508,9 +539,11 @@ namespace Flower_Store
             // 
             // txtCustomer
             // 
+            this.txtCustomer.Enabled = false;
             this.txtCustomer.Location = new System.Drawing.Point(490, 39);
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(305, 23);
+            this.txtCustomer.ReadOnly = true;
+            this.txtCustomer.Size = new System.Drawing.Size(194, 23);
             this.txtCustomer.TabIndex = 13;
             // 
             // label4
@@ -527,6 +560,7 @@ namespace Flower_Store
             // 
             this.txtIdOrder.Location = new System.Drawing.Point(204, 39);
             this.txtIdOrder.Name = "txtIdOrder";
+            this.txtIdOrder.ReadOnly = true;
             this.txtIdOrder.Size = new System.Drawing.Size(161, 23);
             this.txtIdOrder.TabIndex = 11;
             // 
@@ -551,12 +585,14 @@ namespace Flower_Store
             this.Controls.Add(this.btnMaximized);
             this.Controls.Add(this.btnMinimized);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dgvSupplier);
+            this.Controls.Add(this.dgvOrder);
             this.Controls.Add(this.groupBox3);
             this.Name = "OderManagement";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OderManagement_FormClosed);
+            this.Load += new System.EventHandler(this.OderManagement_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OderManagement_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -577,12 +613,10 @@ namespace Flower_Store
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DateTimePicker dtpOrder;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dgvSupplier;
+        private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtTotalprice;
         private System.Windows.Forms.Label label10;
@@ -600,6 +634,8 @@ namespace Flower_Store
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdOrder;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button getCustomer;
+        private System.Windows.Forms.Button btnGetProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -610,5 +646,6 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

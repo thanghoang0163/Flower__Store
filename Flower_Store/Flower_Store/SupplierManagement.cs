@@ -26,7 +26,7 @@ namespace Flower_Store
             da.Fill(dt);
             connection.Close();
             dgvSupplier.DataSource = dt;
-            dgvSupplier.Columns["IDPROD"].Visible = false;
+            //dgvSupplier.Columns["IDPROD"].Visible = false;
             for (int i = 0; i < dgvSupplier.Rows.Count - 1; i++)
             {
                 dgvSupplier.Rows[i].Cells["STT"].Value = (i + 1);
@@ -234,6 +234,11 @@ namespace Flower_Store
             txtPhone.Text = dgvSupplier.CurrentRow.Cells[3].Value.ToString();
             txtUnitprice.Text = dgvSupplier.CurrentRow.Cells[7].Value.ToString();
             txtTotalprice.Text = dgvSupplier.CurrentRow.Cells[8].Value.ToString();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

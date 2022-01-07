@@ -18,6 +18,7 @@ namespace Flower_Store
 
         private void connectDb()
         {
+           
             connection = new SqlConnection(strCon);
             connection.Open();
             string sql = "select * from EMPLOYEE";  
@@ -139,6 +140,7 @@ namespace Flower_Store
             txtEmployee.Text = dgvEmployee.CurrentRow.Cells[2].Value.ToString();
             txtPhone.Text = dgvEmployee.CurrentRow.Cells[3].Value.ToString();
             txtSalary.Text = dgvEmployee.CurrentRow.Cells[4].Value.ToString();
+      
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

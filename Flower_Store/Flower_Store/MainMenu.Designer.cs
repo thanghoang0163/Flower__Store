@@ -47,6 +47,7 @@ namespace Flower_Store
             this.btnExitt = new System.Windows.Forms.Button();
             this.btnMaximizedd = new System.Windows.Forms.Button();
             this.btnMinimizedd = new System.Windows.Forms.Button();
+            this.btnInstall = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +117,7 @@ namespace Flower_Store
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(192, 122);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(689, 386);
+            this.pictureBox1.Size = new System.Drawing.Size(689, 457);
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
@@ -258,13 +259,28 @@ namespace Flower_Store
             this.btnMinimizedd.UseVisualStyleBackColor = false;
             this.btnMinimizedd.Click += new System.EventHandler(this.btnMinimizedd_Click);
             // 
+            // btnInstall
+            // 
+            this.btnInstall.BackColor = System.Drawing.Color.Gray;
+            this.btnInstall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstall.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInstall.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnInstall.Location = new System.Drawing.Point(24, 514);
+            this.btnInstall.Name = "btnInstall";
+            this.btnInstall.Size = new System.Drawing.Size(149, 65);
+            this.btnInstall.TabIndex = 51;
+            this.btnInstall.Text = "Installation Guide";
+            this.btnInstall.UseVisualStyleBackColor = false;
+            this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(917, 540);
+            this.ClientSize = new System.Drawing.Size(917, 609);
             this.ControlBox = false;
+            this.Controls.Add(this.btnInstall);
             this.Controls.Add(this.btnExitt);
             this.Controls.Add(this.btnMaximizedd);
             this.Controls.Add(this.btnMinimizedd);
@@ -306,5 +322,6 @@ namespace Flower_Store
         private System.Windows.Forms.Button btnExitt;
         private System.Windows.Forms.Button btnMaximizedd;
         private System.Windows.Forms.Button btnMinimizedd;
+        private System.Windows.Forms.Button btnInstall;
     }
 }

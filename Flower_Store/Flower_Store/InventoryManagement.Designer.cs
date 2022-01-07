@@ -45,6 +45,7 @@ namespace Flower_Store
             this.txtId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -52,10 +53,6 @@ namespace Flower_Store
             this.txtSoldQuantity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMaximized = new System.Windows.Forms.Button();
-            this.btnMinimized = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +60,10 @@ namespace Flower_Store
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnMaximized = new System.Windows.Forms.Button();
+            this.btnMinimized = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,6 +81,7 @@ namespace Flower_Store
             // 
             // txtTotalQuantity
             // 
+            this.txtTotalQuantity.Enabled = false;
             this.txtTotalQuantity.Location = new System.Drawing.Point(573, 127);
             this.txtTotalQuantity.Name = "txtTotalQuantity";
             this.txtTotalQuantity.ReadOnly = true;
@@ -197,8 +199,10 @@ namespace Flower_Store
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(187, 33);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(169, 23);
             this.txtId.TabIndex = 11;
             // 
@@ -215,6 +219,7 @@ namespace Flower_Store
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.groupBox3.Controls.Add(this.btnSubmit);
             this.groupBox3.Controls.Add(this.btnReload);
             this.groupBox3.Controls.Add(this.btnFind);
             this.groupBox3.Controls.Add(this.btnClose);
@@ -241,6 +246,22 @@ namespace Flower_Store
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flower";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubmit.Image = global::Flower_Store.Properties.Resources.add;
+            this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubmit.Location = new System.Drawing.Point(316, 207);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(99, 38);
+            this.btnSubmit.TabIndex = 46;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnReload
             // 
@@ -337,6 +358,53 @@ namespace Flower_Store
             this.dgvInventory.TabIndex = 0;
             this.dgvInventory.Click += new System.EventHandler(this.dgvInventory_Click);
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "IDPROD";
+            this.Column2.HeaderText = "ID";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "PRODUCT";
+            this.Column3.HeaderText = "Product";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "UNITPRICE";
+            this.Column5.HeaderText = "Unit Price ";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 120;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "SOLDQUANTITY";
+            this.Column8.HeaderText = "Sold Quantity";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "REMANININGQUANTITY";
+            this.Column7.HeaderText = "Remaining Quantity";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "TOTALQUANTITY";
+            this.Column6.HeaderText = "Total Quantity";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 150;
+            // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -386,53 +454,6 @@ namespace Flower_Store
             this.pictureBox1.Size = new System.Drawing.Size(65, 55);
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "IDPROD";
-            this.Column2.HeaderText = "ID";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "PRODUCT";
-            this.Column3.HeaderText = "Product";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "UNITPRICE";
-            this.Column5.HeaderText = "Unit Price ";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "SOLDQUANTITY";
-            this.Column8.HeaderText = "Sold Quantity";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "REMANININGQUANTITY";
-            this.Column7.HeaderText = "Remaining Quantity";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "TOTALQUANTITY";
-            this.Column6.HeaderText = "Total Quantity";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
             // 
             // InventoryManagement
             // 
@@ -495,5 +516,6 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }

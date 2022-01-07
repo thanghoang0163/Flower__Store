@@ -158,5 +158,11 @@ namespace Flower_Store
             InvoiceManagement invoice = new InvoiceManagement();
             invoice.Show();
         }
+
+        private void btnInstall_Click(object sender, EventArgs e)
+        {
+            InstallationGuide installationGuide = new InstallationGuide();
+            installationGuide.Show();
+        }
     }
 }

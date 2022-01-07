@@ -257,6 +257,7 @@ namespace Flower_Store
             this.btnFind.TabIndex = 46;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // btnClose
             // 
@@ -363,6 +364,7 @@ namespace Flower_Store
             // 
             // txtTotalprice
             // 
+            this.txtTotalprice.Enabled = false;
             this.txtTotalprice.Location = new System.Drawing.Point(961, 92);
             this.txtTotalprice.Name = "txtTotalprice";
             this.txtTotalprice.ReadOnly = true;
@@ -482,8 +484,10 @@ namespace Flower_Store
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(204, 39);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(161, 23);
             this.txtId.TabIndex = 11;
             // 

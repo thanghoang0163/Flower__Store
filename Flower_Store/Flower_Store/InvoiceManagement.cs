@@ -16,80 +16,95 @@ namespace Flower_Store
         {
             InitializeComponent();
         }
+        glbVar getFunction = new glbVar();
         SqlConnection connection;
         string strCon = @"Data Source=DESKTOP-BPPFG9F;Initial Catalog=FLOWERSTORE;Integrated Security=True";
-
+        private void btnGetProduct_Click(object sender, EventArgs e)
+        {
+            glbVar.isGetCustomerForInvoice = true;
+            CustomerManagement customer = new CustomerManagement();
+            customer.Show();
+            this.Hide();
+        }
         private void connectDb()
         {
+            if(glbVar.isGetProductForInvoice == true)
+            {
+              
+            }    
             connection = new SqlConnection(strCon);
             connection.Open();
-            string sql = "select * from EMPLOYEE";
+            string sql = "select * from ORDERS WHERE idcus ='" + glbVar.idCustomer + "'";
             SqlCommand com = new SqlCommand(sql, connection);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            for (int i = 0; i < dgvInvoice.Rows.Count - 1; i++)
+            {
+                dgvInvoice.Rows[i].Cells["STT"].Value = (i + 1);
+            }
             connection.Close();
             dgvInvoice.DataSource = dt;
+            getFunction.setDefaultvalue();
         }
 
         private void dtpInvoice_ValueChanged(object sender, EventArgs e)
         {
-            dtpInvoice.CustomFormat = "ddd, dd/MMM/yyyy  hh:mm";
+            //dtpInvoice.CustomFormat = "ddd, dd/MMM/yyyy  hh:mm";
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            glbVar.isGetCustomerForInvoice = false;
             this.Close();
         }
         private void clearData()
         {
             txtId.Text = "";
-            txtQuantity.Text = "";
-            txtTotal.Text = "";
-            txtUnitprice.Text = "";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (txtQuantity.Text != "" && txtTotal.Text != "" && txtUnitprice.Text != "")
-            //    {
-            //        connection.Open();
-            //        string sql = "insert into employee (NAMEEMP, PHONE, SALARY) values('" + txtEmployee.Text + "', '" + txtPhone.Text + "',' " + txtSalary.Text + "')";
-            //        SqlCommand com = new SqlCommand(sql, connection);
-            //        int result = (int)com.ExecuteNonQuery();
-            //        if (result > 0)
-            //        {
-            //            MessageBox.Show("Employee added");
-            //            connection.Close();
-            //            connectDb();
-            //            clearData();
-            //        }
-            //        else
+            try
+            {
+                if (txtId.Text == "")
+                {
+                    connection.Open();
+                    string sql = "insert into employee (IDCUS, PRODUCT, IDOD, IDEMP, TOTAL, INVOICEDATE) values('')";
+                    SqlCommand com = new SqlCommand(sql, connection);
+                    int result = (int)com.ExecuteNonQuery();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Employee added");
+                        connection.Close();
+                        connectDb();
+                        clearData();
+                    }
+                    else
 
-            //            MessageBox.Show("Add failed");
-            //        connection.Close();
+                        MessageBox.Show("Add failed");
+                    connection.Close();
 
 
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Please fill out the information completely!");
-            //        connection.Close();
-            //    }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill out the information completely!");
+                    connection.Close();
+                }
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Connection error" + ex.Message);
-            //    connection.Close();
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Connection error" + ex.Message);
+                connection.Close();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            glbVar.isGetCustomerForInvoice = false;
             this.Close();
         }
 
@@ -123,6 +138,18 @@ namespace Flower_Store
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+    
+
+        private void InvoiceManagement_Load(object sender, EventArgs e)
+        {
+            connectDb();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

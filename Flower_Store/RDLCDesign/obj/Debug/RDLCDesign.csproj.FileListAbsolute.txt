@@ -1,0 +1,15 @@
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\bin\Debug\RDLCDesign.exe.config
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\bin\Debug\RDLCDesign.exe
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\bin\Debug\RDLCDesign.pdb
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RDLCDesign.Properties.Resources.resources
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RDLCDesign.csproj.GenerateResource.cache
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RdlCompile.cache
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RdlCompile.compiled
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RDLCDesign.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RDLCDesign.csproj.CopyComplete
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RDLCDesign.exe
+C:\Users\DELL\Documents\GitHub\Flower__Store\Flower_Store\RDLCDesign\obj\Debug\RDLCDesign.pdb

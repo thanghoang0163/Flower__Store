@@ -20,6 +20,17 @@ namespace Flower_Store
         string strCon = @"Data Source=DESKTOP-BPPFG9F;Initial Catalog=FLOWERSTORE;Integrated Security=True";
         private void connectDb()
         {
+            if (glbVar.isGetProductForInvoice == false || glbVar.isGetProductForOrders == false)
+            {
+                btnSubmit.Visible = false;
+            }    
+            if (glbVar.isGetProductForInvoice == true || glbVar.isGetProductForOrders == true)
+            {
+                btnSubmit.Visible = true;
+                btnAdd.Visible = false;
+                btnDelete.Visible = false;
+                btnUpdate.Visible = false;
+            }    
             connection = new SqlConnection(strCon);
             connection.Open();
             string sql = "select * from INVENTORY";  
@@ -114,25 +125,30 @@ namespace Flower_Store
                 if (txtProduct.Text != "" && txtUnitprice.Text != "" && txtRemainingQuantity.Text != "" && txtSoldQuantity.Text != "" )
                 {
                     connection.Open();
-                    string sql = "update INVENTORY set PRODUCT = '" + txtProduct.Text + "' , UNITPRICE = '" + txtUnitprice.Text + "', SOLDQUANTITY = '" + txtSoldQuantity.Text + "', REMANININGQUANTITY = '" + txtRemainingQuantity.Text + "', TOTALQUANTITY ='" + (Int32.Parse(txtSoldQuantity.Text) + Int32.Parse(txtRemainingQuantity.Text)) + "' where idprod = '" + txtId.Text + "'";
-                    SqlCommand com = new SqlCommand(sql, connection);
-                    int result = (int)com.ExecuteNonQuery();
-                    if (result > 0)
+                    if (getInventory(txtProduct.Text))
                     {
-                        MessageBox.Show("Update success!.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        connection.Close();
-                        connectDb();
-                        clearData();
+                        MessageBox.Show("The product is exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        MessageBox.Show("Something wrong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        string sql = "update INVENTORY set PRODUCT = '" + txtProduct.Text + "' , UNITPRICE = '" + txtUnitprice.Text + "', SOLDQUANTITY = '" + txtSoldQuantity.Text + "', REMANININGQUANTITY = '" + txtRemainingQuantity.Text + "', TOTALQUANTITY ='" + (Int32.Parse(txtSoldQuantity.Text) + Int32.Parse(txtRemainingQuantity.Text)) + "' where idprod = '" + txtId.Text + "'";
+                        SqlCommand com = new SqlCommand(sql, connection);
+                        int result = (int)com.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Update success!.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            connection.Close();
+                            connectDb();
+                            clearData();
+                        }
+                        else
+                            MessageBox.Show("Something wrong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     connection.Close();
                 }
                 else
                 {
                     MessageBox.Show("Please fill out the information completely!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    connection.Close();
-
                 }
             }
             catch (Exception ex)
@@ -150,6 +166,11 @@ namespace Flower_Store
             txtSoldQuantity.Text = dgvInventory.CurrentRow.Cells[4].Value.ToString();
             txtTotalQuantity.Text = dgvInventory.CurrentRow.Cells[6].Value.ToString();
             txtUnitprice.Text = dgvInventory.CurrentRow.Cells[3].Value.ToString();
+            if (glbVar.isGetProductForInvoice == true || glbVar.isGetProductForOrders == true)
+            {
+                glbVar.product = dgvInventory.CurrentRow.Cells[2].Value.ToString();
+                glbVar.idProduct = Int32.Parse(dgvInventory.CurrentRow.Cells[1].Value.ToString());
+            }
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -175,11 +196,25 @@ namespace Flower_Store
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            if (glbVar.isGetProductForInvoice == true || glbVar.isGetProductForOrders == true)
+            {
+           
+                InvoiceManagement invoice = new InvoiceManagement();
+                invoice.Show();
+                this.Close();
+            }    
             this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            if (glbVar.isGetProductForInvoice == true || glbVar.isGetProductForOrders == true)
+            {
+                
+                InvoiceManagement invoice = new InvoiceManagement();
+                invoice.Show();
+                this.Close();
+            }
             this.Close();
         }
 
@@ -213,6 +248,22 @@ namespace Flower_Store
 
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if(glbVar.isGetProductForInvoice == true)
+            {
+                InvoiceManagement invoice = new InvoiceManagement();
+                invoice.Show();
+              
+            }
+            if(glbVar.isGetProductForOrders == true)
+            {
+                OderManagement order = new OderManagement();
+                order.Show();
+            }
+            this.Close();
         }
     }
 }

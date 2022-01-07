@@ -40,7 +40,7 @@ namespace Flower_Store
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -81,6 +81,7 @@ namespace Flower_Store
             this.label7.Size = new System.Drawing.Size(324, 32);
             this.label7.TabIndex = 22;
             this.label7.Text = "CUSTOMER MANAGEMENT";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // dgvCustomer
             // 
@@ -151,7 +152,7 @@ namespace Flower_Store
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Thistle;
-            this.groupBox3.Controls.Add(this.btnExport);
+            this.groupBox3.Controls.Add(this.btnSubmit);
             this.groupBox3.Controls.Add(this.btnReload);
             this.groupBox3.Controls.Add(this.btnFind);
             this.groupBox3.Controls.Add(this.btnClose);
@@ -179,22 +180,23 @@ namespace Flower_Store
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Customer ";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // btnExport
+            // btnSubmit
             // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(364, 281);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(101, 38);
-            this.btnExport.TabIndex = 52;
-            this.btnExport.Text = "Export ";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmit.FlatAppearance.BorderSize = 20;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubmit.Image = global::Flower_Store.Properties.Resources.add;
+            this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubmit.Location = new System.Drawing.Point(219, 210);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(99, 38);
+            this.btnSubmit.TabIndex = 53;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnReload
             // 
@@ -204,12 +206,13 @@ namespace Flower_Store
             this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReload.Location = new System.Drawing.Point(212, 281);
+            this.btnReload.Location = new System.Drawing.Point(354, 280);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(101, 38);
             this.btnReload.TabIndex = 51;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnFind
             // 
@@ -219,12 +222,13 @@ namespace Flower_Store
             this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFind.Image = global::Flower_Store.Properties.Resources.search;
             this.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFind.Location = new System.Drawing.Point(582, 211);
+            this.btnFind.Location = new System.Drawing.Point(219, 280);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(99, 38);
             this.btnFind.TabIndex = 46;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // btnClose
             // 
@@ -234,7 +238,7 @@ namespace Flower_Store
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Image = global::Flower_Store.Properties.Resources.close__1_;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(514, 281);
+            this.btnClose.Location = new System.Drawing.Point(505, 280);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(95, 38);
             this.btnClose.TabIndex = 50;
@@ -250,12 +254,13 @@ namespace Flower_Store
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Image = global::Flower_Store.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(435, 211);
+            this.btnDelete.Location = new System.Drawing.Point(505, 210);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 49;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -265,7 +270,7 @@ namespace Flower_Store
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Image = global::Flower_Store.Properties.Resources.edit;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(287, 211);
+            this.btnUpdate.Location = new System.Drawing.Point(357, 210);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(99, 38);
             this.btnUpdate.TabIndex = 48;
@@ -281,7 +286,7 @@ namespace Flower_Store
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Image = global::Flower_Store.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(149, 211);
+            this.btnAdd.Location = new System.Drawing.Point(219, 210);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(99, 38);
             this.btnAdd.TabIndex = 47;
@@ -324,7 +329,8 @@ namespace Flower_Store
             // 
             // dtpCustomer
             // 
-            this.dtpCustomer.CustomFormat = "";
+            this.dtpCustomer.CustomFormat = "dd/MM/yyyy";
+            this.dtpCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpCustomer.Location = new System.Drawing.Point(533, 89);
             this.dtpCustomer.Name = "dtpCustomer";
             this.dtpCustomer.Size = new System.Drawing.Size(222, 23);
@@ -403,8 +409,10 @@ namespace Flower_Store
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(204, 39);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(161, 23);
             this.txtId.TabIndex = 11;
             // 
@@ -524,7 +532,6 @@ namespace Flower_Store
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnMinimized;
         private System.Windows.Forms.Button btnMaximized;
@@ -537,5 +544,6 @@ namespace Flower_Store
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
